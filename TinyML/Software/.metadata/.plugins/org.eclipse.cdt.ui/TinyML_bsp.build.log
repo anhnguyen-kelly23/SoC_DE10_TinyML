@@ -1,0 +1,6 @@
+12:29:47 **** Clean-only build of configuration Nios II for project TinyML_bsp ****
+make clean 
+[BSP clean complete]
+
+12:29:48 Build Finished (took 848ms)
+

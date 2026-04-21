@@ -1,0 +1,207 @@
+//============================================================================
+// tb_mlp_accelerator.v — Testbench for MLP Accelerator
+//============================================================================
+// Simulates the full MNIST inference pipeline:
+//   1. Load a test image (784 pixels) from hex file
+//   2. Write pixels to accelerator via Avalon-MM
+//   3. Start inference
+//   4. Wait for completion
+//   5. Read and verify result
+//============================================================================
+
+`timescale 1ns / 1ps
+
+module tb_mlp_accelerator;
+
+    // ========================================================================
+    // Parameters
+    // ========================================================================
+    parameter CLK_PERIOD = 20;   // 50 MHz
+    parameter INPUT_SIZE = 784;
+    parameter OUTPUT_SIZE = 10;
+
+    // ========================================================================
+    // Signals
+    // ========================================================================
+    reg         clk;
+    reg         reset;
+    reg  [10:0] avs_address;
+    reg         avs_read;
+    reg         avs_write;
+    reg  [31:0] avs_writedata;
+    wire [31:0] avs_readdata;
+    wire [3:0]  result_digit;
+    wire        result_valid;
+    wire        irq;
+
+    // Test image storage
+    reg [7:0] test_image [0:INPUT_SIZE-1];
+    reg [3:0] expected_digit;
+
+    // ========================================================================
+    // DUT Instantiation
+    // ========================================================================
+    mlp_accelerator #(
+        .INPUT_SIZE       (784),
+        .HIDDEN_SIZE      (128),
+        .OUTPUT_SIZE      (10),
+        .L1_REQUANT_MULT  (16'd12),
+        .L1_REQUANT_SHIFT (5'd15),
+        .LEAKY_SHIFT      (3),
+        .W1_INIT_FILE     ("w1_int8.hex"),
+        .W2_INIT_FILE     ("w2_int8.hex"),
+        .B1_INIT_FILE     ("b1_int32.hex")
+    ) dut (
+        .clk           (clk),
+        .reset         (reset),
+        .avs_address   (avs_address),
+        .avs_read      (avs_read),
+        .avs_write     (avs_write),
+        .avs_writedata (avs_writedata),
+        .avs_readdata  (avs_readdata),
+        .result_digit  (result_digit),
+        .result_valid  (result_valid),
+        .irq           (irq)
+    );
+
+    // ========================================================================
+    // Clock Generation
+    // ========================================================================
+    initial clk = 0;
+    always #(CLK_PERIOD/2) clk = ~clk;
+
+    // ========================================================================
+    // Avalon-MM Bus Tasks
+    // ========================================================================
+    task avalon_write;
+        input [10:0] addr;
+        input [31:0] data;
+    begin
+        @(posedge clk);
+        avs_address   <= addr;
+        avs_write     <= 1'b1;
+        avs_writedata <= data;
+        @(posedge clk);
+        avs_write     <= 1'b0;
+    end
+    endtask
+
+    task avalon_read;
+        input  [10:0] addr;
+        output [31:0] data;
+    begin
+        @(posedge clk);
+        avs_address <= addr;
+        avs_read    <= 1'b1;
+        @(posedge clk);
+        // Read latency = 1: data available next cycle
+        avs_read <= 1'b0;
+        @(posedge clk);
+        data = avs_readdata;
+    end
+    endtask
+
+    // ========================================================================
+    // Main Test Sequence
+    // ========================================================================
+    integer i;
+    reg [31:0] read_data;
+    reg [31:0] status;
+    integer    start_time, end_time;
+
+    initial begin
+        $display("============================================");
+        $display("  MNIST MLP Accelerator Testbench");
+        $display("============================================");
+
+        // Initialize
+        reset         = 1'b1;
+        avs_address   = 11'd0;
+        avs_read      = 1'b0;
+        avs_write     = 1'b0;
+        avs_writedata = 32'd0;
+
+        // Load test image
+        $readmemh("test_image.hex", test_image);
+        expected_digit = 4'd2;  // Expected result (update from Python)
+
+        // Reset
+        repeat (10) @(posedge clk);
+        reset = 1'b0;
+        repeat (5) @(posedge clk);
+
+        $display("\n[1] Writing test image (%0d pixels)...", INPUT_SIZE);
+        for (i = 0; i < INPUT_SIZE; i = i + 1) begin
+            avalon_write(11'h400 + i, {24'd0, test_image[i]});
+        end
+        $display("    Image loaded successfully.");
+
+        // Start inference
+        $display("\n[2] Starting inference...");
+        start_time = $time;
+        avalon_write(11'h000, 32'h0000_0001);  // CTRL: START=1
+
+        // Wait for completion (poll status)
+        $display("    Waiting for result...");
+        status = 32'd0;
+        while (!(status & 32'h2)) begin
+            avalon_read(11'h001, status);
+        end
+        end_time = $time;
+
+        $display("    Inference complete! Time: %0d ns (%0d cycles)",
+                 end_time - start_time,
+                 (end_time - start_time) / CLK_PERIOD);
+
+        // Read result
+        avalon_read(11'h002, read_data);
+        $display("\n[3] Results:");
+        $display("    Predicted digit : %0d", read_data[3:0]);
+        $display("    Expected digit  : %0d", expected_digit);
+
+        // Read max score
+        avalon_read(11'h003, read_data);
+        $display("    Max score       : %0d (signed)", $signed(read_data));
+
+        // Read all output scores
+        $display("\n    Output scores:");
+        for (i = 0; i < OUTPUT_SIZE; i = i + 1) begin
+            avalon_read(11'h004 + i, read_data);
+            $display("      Digit %0d: %8d", i, $signed(read_data));
+        end
+
+        // Verify
+        avalon_read(11'h002, read_data);
+        if (read_data[3:0] == expected_digit) begin
+            $display("\n    *** PASS *** Prediction matches expected digit!");
+        end else begin
+            $display("\n    *** FAIL *** Expected %0d, got %0d",
+                     expected_digit, read_data[3:0]);
+        end
+
+        $display("\n============================================");
+        $display("  Testbench Complete");
+        $display("============================================");
+
+        #100;
+        $finish;
+    end
+
+    // ========================================================================
+    // Timeout Watchdog
+    // ========================================================================
+    initial begin
+        #(CLK_PERIOD * 200000);  // 200K cycles max
+        $display("\n*** TIMEOUT: Inference did not complete ***");
+        $finish;
+    end
+
+    // ========================================================================
+    // Waveform Dump
+    // ========================================================================
+    initial begin
+        $dumpfile("mlp_accelerator.vcd");
+        $dumpvars(0, tb_mlp_accelerator);
+    end
+
+endmodule

@@ -1,0 +1,108 @@
+# Reading D:/intelFPGA_lite/18.1/modelsim_ase/tcl/vsim/pref.tcl
+# ERROR: No extended dataflow license exists
+# do moduleTop_run_msim_rtl_verilog.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 10.5b Lib Mapping Utility 2016.10 Oct  5 2016
+# vmap work rtl_work 
+# Copying D:/intelFPGA_lite/18.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vlog -vlog01compat -work work +incdir+D:/Quartus/TinyML {D:/Quartus/TinyML/weight_rom.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 11:14:57 on Apr 15,2026
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Quartus/TinyML" D:/Quartus/TinyML/weight_rom.v 
+# -- Compiling module weight_rom
+# 
+# Top level modules:
+# 	weight_rom
+# End time: 11:14:57 on Apr 15,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+D:/Quartus/TinyML {D:/Quartus/TinyML/mlp_accelerator.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 11:14:57 on Apr 15,2026
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Quartus/TinyML" D:/Quartus/TinyML/mlp_accelerator.v 
+# -- Compiling module mlp_accelerator
+# 
+# Top level modules:
+# 	mlp_accelerator
+# End time: 11:14:57 on Apr 15,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+D:/Quartus/TinyML {D:/Quartus/TinyML/mac_unit.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 11:14:57 on Apr 15,2026
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Quartus/TinyML" D:/Quartus/TinyML/mac_unit.v 
+# -- Compiling module mac_unit
+# 
+# Top level modules:
+# 	mac_unit
+# End time: 11:14:57 on Apr 15,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vlog -vlog01compat -work work +incdir+D:/Quartus/TinyML {D:/Quartus/TinyML/tb_mlp_accelerator.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 11:14:58 on Apr 15,2026
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Quartus/TinyML" D:/Quartus/TinyML/tb_mlp_accelerator.v 
+# -- Compiling module tb_mlp_accelerator
+# 
+# Top level modules:
+# 	tb_mlp_accelerator
+# End time: 11:14:58 on Apr 15,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs="+acc"  tb_mlp_accelerator
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs=""+acc"" tb_mlp_accelerator 
+# Start time: 11:14:58 on Apr 15,2026
+# Loading work.tb_mlp_accelerator
+# Loading work.mlp_accelerator
+# Loading work.weight_rom
+# Loading work.mac_unit
+# 
+# add wave *
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run -all
+# ============================================
+#   MNIST MLP Accelerator Testbench
+# ============================================
+# 
+# [1] Writing test image (784 pixels)...
+#     Image loaded successfully.
+# 
+# [2] Starting inference...
+#     Waiting for result...
+#     Inference complete! Time: 2041060 ns (102053 cycles)
+# 
+# [3] Results:
+#     Predicted digit : 2
+#     Expected digit  : 2
+#     Max score       : 22766 (signed)
+# 
+#     Output scores:
+#       Digit 0:     3055
+#       Digit 1:   -11356
+#       Digit 2:    22766
+#       Digit 3:     5585
+#       Digit 4:    -5846
+#       Digit 5:    -1990
+#       Digit 6:     -405
+#       Digit 7:    -2466
+#       Digit 8:    -6579
+#       Digit 9:    -2508
+# 
+#     *** PASS *** Prediction matches expected digit!
+# 
+# ============================================
+#   Testbench Complete
+# ============================================
+# ** Note: $finish    : D:/Quartus/TinyML/tb_mlp_accelerator.v(187)
+#    Time: 2073590 ns  Iteration: 0  Instance: /tb_mlp_accelerator
+# 1
+# Break in Module tb_mlp_accelerator at D:/Quartus/TinyML/tb_mlp_accelerator.v line 187
+# End time: 11:15:47 on Apr 15,2026, Elapsed time: 0:00:49
+# Errors: 0, Warnings: 0

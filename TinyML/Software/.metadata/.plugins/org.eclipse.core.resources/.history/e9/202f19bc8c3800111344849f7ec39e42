@@ -1,0 +1,169 @@
+/*
+ * source.c
+ *
+ *  Created on: 15-04-2026
+ *      Author: Admin
+ */
+/*============================================================================
+ * main.c — Nios II Firmware for MNIST MLP SoC
+ *============================================================================
+ * Receives a 28×28 grayscale image (784 bytes) via JTAG UART,
+ * writes to the MLP Accelerator, triggers inference, and displays
+ * the predicted digit on 7-segment display and UART.
+ *
+ * Build: Nios II Eclipse (SBT) with HAL BSP
+ * Target: DE10-Standard (Cyclone V)
+ *============================================================================*/
+
+#include <stdio.h>
+#include <stdint.h>
+#include <string.h>
+#include "system.h"
+#include "io.h"
+#include "sys/alt_stdio.h"
+#include "alt_types.h"
+
+/*--- MLP Accelerator Register Offsets (byte address) ---*/
+#define MLP_REG_CTRL     0x0000    /* W: bit0=START, bit1=SOFT_RESET */
+#define MLP_REG_STATUS   0x0004    /* R: bit0=BUSY, bit1=DONE         */
+#define MLP_REG_RESULT   0x0008    /* R: predicted digit 0-9           */
+#define MLP_REG_SCORE    0x000C    /* R: max score (INT32)              */
+#define MLP_REG_OUTPUT   0x0010    /* R: output[0]..output[9] (×4B)    */
+#define MLP_REG_INPUT    0x1000    /* W: pixel[0]..pixel[783] (×4B)    */
+
+#define MLP_CTRL_START   0x01
+#define MLP_CTRL_RESET   0x02
+#define MLP_STATUS_BUSY  0x01
+#define MLP_STATUS_DONE  0x02
+
+/*--- 7-Segment Patterns (active-low) ---*/
+static const alt_u8 seven_seg_lut[10] = {
+    0x40,  /* 0 */
+    0x79,  /* 1 */
+    0x24,  /* 2 */
+    0x30,  /* 3 */
+    0x19,  /* 4 */
+    0x12,  /* 5 */
+    0x02,  /* 6 */
+    0x78,  /* 7 */
+    0x00,  /* 8 */
+    0x10   /* 9 */
+};
+
+/*--- MLP Accelerator Driver ---*/
+
+static inline void mlp_soft_reset(alt_u32 base)
+{
+    IOWR_32DIRECT(base, MLP_REG_CTRL, MLP_CTRL_RESET);
+}
+
+static inline void mlp_write_pixel(alt_u32 base, int index, alt_u8 value)
+{
+    IOWR_32DIRECT(base, MLP_REG_INPUT + (index << 2), (alt_u32)value);
+}
+
+static inline void mlp_start(alt_u32 base)
+{
+    IOWR_32DIRECT(base, MLP_REG_CTRL, MLP_CTRL_START);
+}
+
+static inline int mlp_is_done(alt_u32 base)
+{
+    alt_u32 status = IORD_32DIRECT(base, MLP_REG_STATUS);
+    return (status & MLP_STATUS_DONE) != 0;
+}
+
+static inline int mlp_get_result(alt_u32 base)
+{
+    return (int)(IORD_32DIRECT(base, MLP_REG_RESULT) & 0x0F);
+}
+
+static inline alt_32 mlp_get_score(alt_u32 base, int digit)
+{
+    return (alt_32)IORD_32DIRECT(base, MLP_REG_OUTPUT + (digit << 2));
+}
+
+/*--- Main ---*/
+
+int main(void)
+{
+    /* Adjust this base address to match your Platform Designer output.
+     * It should be defined in system.h as MLP_ACCELERATOR_0_BASE or similar. */
+#ifdef MLP_ACCELERATOR_0_BASE
+    const alt_u32 mlp_base = MLP_ACCELERATOR_0_BASE;
+#else
+    /* Fallback: replace with your actual base address */
+    const alt_u32 mlp_base = 0x00010000;
+#endif
+
+    int digit, i;
+    alt_u8 pixel;
+    alt_u8 image[784];
+
+    printf("\n");
+    printf("================================================\n");
+    printf("  MNIST Digit Recognition — TinyML SoC\n");
+    printf("  MLP: 784 -> 128 (ReLU) -> 10\n");
+    printf("  Board: DE10-Standard (Cyclone V)\n");
+    printf("================================================\n\n");
+
+    /* Initial reset */
+    mlp_soft_reset(mlp_base);
+
+    while (1) {
+        printf("Send 784 bytes (28x28 grayscale image)...\n");
+
+        /* ---- Receive 784 bytes via JTAG UART ---- */
+        for (i = 0; i < 784; i++) {
+            /* alt_getchar() blocks until a character arrives */
+            image[i] = (alt_u8)alt_getchar();
+        }
+        printf("Image received.\n");
+
+        /* ---- Normalize and write to accelerator ---- */
+        /* Input normalization: pixel / 2 → maps [0,255] to [0,127] (INT8)
+         * This matches the training normalization of [0,1] scaled by 127. */
+        for (i = 0; i < 784; i++) {
+            pixel = image[i] >> 1;  /* Simple /2 normalization */
+            mlp_write_pixel(mlp_base, i, pixel);
+        }
+
+        /* ---- Start inference ---- */
+        mlp_start(mlp_base);
+
+        /* ---- Wait for completion ---- */
+        while (!mlp_is_done(mlp_base)) {
+            /* Busy-wait (~2ms @ 50MHz) */
+        }
+
+        /* ---- Read result ---- */
+        digit = mlp_get_result(mlp_base);
+
+        /* ---- Display on 7-segment ---- */
+#ifdef SEVEN_SEG_PIO_BASE
+        IOWR_32DIRECT(SEVEN_SEG_PIO_BASE, 0, seven_seg_lut[digit]);
+#endif
+
+        /* ---- Display on LEDs ---- */
+#ifdef LEDS_PIO_BASE
+        IOWR_32DIRECT(LEDS_PIO_BASE, 0, (1 << digit));
+#endif
+
+        /* ---- Print result ---- */
+        printf("\n  Predicted digit: %d\n", digit);
+        printf("  Scores: ");
+        for (i = 0; i < 10; i++) {
+            printf("[%d]=%ld ", i, (long)mlp_get_score(mlp_base, i));
+        }
+        printf("\n\n");
+
+        /* Reset for next inference */
+        mlp_soft_reset(mlp_base);
+    }
+
+    return 0;
+}
+
+
+
+

@@ -1,0 +1,6 @@
+14:40:08 **** Clean-only build of configuration Nios II for project MATiny_bsp ****
+make clean 
+[BSP clean complete]
+
+14:40:08 Build Finished (took 766ms)
+

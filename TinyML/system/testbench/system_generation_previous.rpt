@@ -1,0 +1,348 @@
+Info: Starting: Create testbench Platform Designer system
+Info: E:/ThuchanhHeThongNhung/SoC_DE10_TinyML/TinyML/system/testbench/system.ipx
+Info: qsys-generate E:\ThuchanhHeThongNhung\SoC_DE10_TinyML\TinyML\system.qsys --testbench=STANDARD --output-directory=E:\ThuchanhHeThongNhung\SoC_DE10_TinyML\TinyML --family="Cyclone V" --part=5CSXFC6D6F31C6
+Progress: Loading TinyML/system.qsys
+Progress: Reading input file
+Progress: Adding clk_0 [clock_source 18.1]
+Progress: Parameterizing module clk_0
+Progress: Adding jtag_uart_0 [altera_avalon_jtag_uart 18.1]
+Progress: Parameterizing module jtag_uart_0
+Progress: Adding mlp_acc [mlp_accelerator 1.0]
+Progress: Parameterizing module mlp_acc
+Progress: Adding nios2_gen2_0 [altera_nios2_gen2 18.1]
+Progress: Parameterizing module nios2_gen2_0
+Progress: Adding onchip_memory2_0 [altera_avalon_onchip_memory2 18.1]
+Progress: Parameterizing module onchip_memory2_0
+Progress: Adding timer_0 [altera_avalon_timer 18.1]
+Progress: Parameterizing module timer_0
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Info: system.jtag_uart_0: JTAG UART IP input clock need to be at least double (2x) the operating frequency of JTAG TCK on board
+Info: qsys-generate succeeded.
+Info: Loading IP catalog for testbench.
+Progress: 
+Progress: 
+Progress: 
+Progress: (2) searching C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/root_components.ipx (ipx file)
+Info: Reading index C:\intelfpga_lite\18.1\quartus\sopc_builder\bin\root_components.ipx
+Info: C:\intelfpga_lite\18.1\quartus\sopc_builder\bin\root_components.ipx: Loading now from components.ipx
+Info: Reading index C:\intelfpga_lite\18.1\quartus\sopc_builder\bin\ip_component_categories.ipx
+Info: C:\intelfpga_lite\18.1\quartus\sopc_builder\bin\ip_component_categories.ipx described 0 plugins, 0 paths, in 0.00 seconds
+Info: C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/ip_component_categories.ipx matched 1 files in 0.00 seconds
+Info: E:/ThuchanhHeThongNhung/SoC_DE10_TinyML/TinyML/system/testbench/ip/**/* matched 0 files in 0.00 seconds
+Info: Reading index E:\ThuchanhHeThongNhung\SoC_DE10_TinyML\TinyML\system\testbench\system.ipx
+Progress: Loading TinyML/MLP_Accelerator_hw.tcl
+Progress: Loading TinyML/system.qsys
+Info: E:/ThuchanhHeThongNhung/SoC_DE10_TinyML/TinyML/* matched 31 files in 0.04 seconds
+Info: E:/ThuchanhHeThongNhung/SoC_DE10_TinyML/TinyML/ip/**/* matched 0 files in 0.00 seconds
+Info: E:/ThuchanhHeThongNhung/SoC_DE10_TinyML/TinyML/*/* matched 374 files in 0.00 seconds
+Info: E:\ThuchanhHeThongNhung\SoC_DE10_TinyML\TinyML\system\testbench\system.ipx described 0 plugins, 3 paths, in 0.04 seconds
+Progress: Loading testbench/system_tb.qsys
+Info: E:/ThuchanhHeThongNhung/SoC_DE10_TinyML/TinyML/system/testbench/* matched 12 files in 0.07 seconds
+Info: E:/ThuchanhHeThongNhung/SoC_DE10_TinyML/TinyML/system/testbench/*/* matched 9 files in 0.00 seconds
+Info: C:/Users/anhng/.altera.quartus/ip/18.1/**/* matched 0 files in 0.00 seconds
+Info: C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/$$QUARTUS_IP_PROJECTDIR/* matched 0 files in 0.00 seconds
+Info: C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/$$QUARTUS_IP_USERDIR/* matched 0 files in 0.00 seconds
+Info: C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/$$QUARTUS_IP_GLOBALDIR/* matched 0 files in 0.00 seconds
+Info: Reading index C:\intelfpga_lite\18.1\ip\altera\altera_components.ipx
+Info: C:\intelfpga_lite\18.1\ip\altera\altera_components.ipx described 2035 plugins, 0 paths, in 0.09 seconds
+Info: C:/intelfpga_lite/18.1/ip/**/* matched 139 files in 0.10 seconds
+Info: C:/intelfpga_lite/ip/**/* matched 0 files in 0.00 seconds
+Info: Reading index C:\intelfpga_lite\18.1\quartus\sopc_builder\builtin.ipx
+Info: C:\intelfpga_lite\18.1\quartus\sopc_builder\builtin.ipx described 83 plugins, 0 paths, in 0.00 seconds
+Info: C:/intelfpga_lite/18.1/quartus/sopc_builder/**/* matched 8 files in 0.01 seconds
+Info: Reading index C:\intelfpga_lite\18.1\quartus\common\librarian\factories\index.ipx
+Info: C:\intelfpga_lite\18.1\quartus\common\librarian\factories\index.ipx described 151 plugins, 0 paths, in 0.01 seconds
+Info: C:/intelfpga_lite/18.1/quartus/common/librarian/factories/**/* matched 4 files in 0.01 seconds
+Info: C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/$IP_IPX_PATH matched 1 files in 0.00 seconds
+Info: C:\intelfpga_lite\18.1\quartus\sopc_builder\bin\root_components.ipx described 0 plugins, 13 paths, in 0.18 seconds
+Info: C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/root_components.ipx matched 1 files in 0.18 seconds
+Progress: 
+Progress: 
+Progress: 
+Info: Running script C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/tbgen.tcl
+Info: send_message Info TB_Gen: QSYS Testbench Generator Rev: $Revision: #1 $
+Info: TB_Gen: QSYS Testbench Generator Rev: $Revision: #1 $
+Info: get_module_property NAME
+Info: send_message Info TB_Gen: System design is: system
+Info: TB_Gen: System design is: system
+Info: get_interfaces 
+Info: get_connections 
+Info: get_interface_property clk EXPORT_OF
+Info: get_instance_property clk_0 CLASS_NAME
+Info: get_instance_assignment clk_0 testbench.partner.map.clk_in
+Info: get_interface_property mlp_result_digit EXPORT_OF
+Info: get_instance_property mlp_acc CLASS_NAME
+Info: get_instance_assignment mlp_acc testbench.partner.map.result_digit_conduit
+Info: get_interface_property mlp_result_valid EXPORT_OF
+Info: get_instance_property mlp_acc CLASS_NAME
+Info: get_instance_assignment mlp_acc testbench.partner.map.result_valid_conduit
+Info: get_interface_property reset EXPORT_OF
+Info: get_instance_property clk_0 CLASS_NAME
+Info: get_instance_assignment clk_0 testbench.partner.map.clk_in_reset
+Info: send_message Info TB_Gen: Creating testbench system : system_tb with all standard BFMs
+Info: TB_Gen: Creating testbench system : system_tb with all standard BFMs
+Info: create_system system_tb
+Info: add_instance system_inst system 
+Info: set_use_testbench_naming_pattern true system
+Info: get_instance_interfaces system_inst
+Info: get_instance_interface_property system_inst clk CLASS_NAME
+Info: get_instance_interface_property system_inst mlp_result_digit CLASS_NAME
+Info: get_instance_interface_property system_inst mlp_result_valid CLASS_NAME
+Info: get_instance_interface_property system_inst reset CLASS_NAME
+Info: get_instance_interface_property system_inst clk CLASS_NAME
+Info: send_message Info TB_Gen: clock_sink found: clk
+Info: TB_Gen: clock_sink found: clk
+Info: get_instance_interface_property system_inst clk CLASS_NAME
+Info: add_instance system_inst_clk_bfm altera_avalon_clock_source 
+Info: get_instance_property system_inst_clk_bfm CLASS_NAME
+Info: get_instance_interface_parameter_value system_inst clk clockRate
+Info: set_instance_parameter_value system_inst_clk_bfm CLOCK_RATE 50000000.0
+Info: set_instance_parameter_value system_inst_clk_bfm CLOCK_UNIT 1
+Info: get_instance_property system_inst_clk_bfm CLASS_NAME
+Info: get_instance_interface_property system_inst clk CLASS_NAME
+Info: get_instance_interfaces system_inst_clk_bfm
+Info: get_instance_interface_property system_inst_clk_bfm clk CLASS_NAME
+Info: add_connection system_inst_clk_bfm.clk system_inst.clk
+Info: get_instance_interface_property system_inst reset CLASS_NAME
+Info: send_message Info TB_Gen: reset_sink found: reset
+Info: TB_Gen: reset_sink found: reset
+Info: get_instance_interface_property system_inst reset CLASS_NAME
+Info: add_instance system_inst_reset_bfm altera_avalon_reset_source 
+Info: get_instance_property system_inst_reset_bfm CLASS_NAME
+Info: get_instance_interface_ports system_inst reset
+Info: get_instance_interface_port_property system_inst reset reset_reset_n ROLE
+Info: get_instance_interface_port_property system_inst reset reset_reset_n ROLE
+Info: set_instance_parameter_value system_inst_reset_bfm ASSERT_HIGH_RESET 0
+Info: set_instance_parameter_value system_inst_reset_bfm INITIAL_RESET_CYCLES 50
+Info: get_instance_property system_inst_reset_bfm CLASS_NAME
+Info: get_instance_interfaces system_inst_reset_bfm
+Info: get_instance_interface_property system_inst_reset_bfm clk CLASS_NAME
+Info: get_instance_interface_property system_inst_reset_bfm reset CLASS_NAME
+Info: get_instance_property system_inst_reset_bfm CLASS_NAME
+Info: get_instance_interface_parameter_value system_inst reset associatedClock
+Info: get_instance_interfaces system_inst_clk_bfm
+Info: get_instance_interface_property system_inst_clk_bfm clk CLASS_NAME
+Info: send_message Warning TB_Gen: system_inst_reset_bfm is not associated to any clock; connecting system_inst_reset_bfm to 'system_inst_clk_bfm.clk'
+Warning: TB_Gen: system_inst_reset_bfm is not associated to any clock; connecting system_inst_reset_bfm to 'system_inst_clk_bfm.clk'
+Info: add_connection system_inst_clk_bfm.clk system_inst_reset_bfm.clk
+Info: get_instance_interface_property system_inst reset CLASS_NAME
+Info: get_instance_interfaces system_inst_reset_bfm
+Info: get_instance_interface_property system_inst_reset_bfm clk CLASS_NAME
+Info: get_instance_interface_property system_inst_reset_bfm reset CLASS_NAME
+Info: add_connection system_inst_reset_bfm.reset system_inst.reset
+Info: get_instance_interface_property system_inst mlp_result_digit CLASS_NAME
+Info: send_message Info TB_Gen: conduit_end found: mlp_result_digit
+Info: TB_Gen: conduit_end found: mlp_result_digit
+Info: get_instance_interface_property system_inst mlp_result_digit CLASS_NAME
+Info: add_instance system_inst_mlp_result_digit_bfm altera_conduit_bfm 
+Info: get_instance_property system_inst_mlp_result_digit_bfm CLASS_NAME
+Info: get_instance_interface_parameter_value system_inst mlp_result_digit associatedClock
+Info: get_instance_interface_parameter_value system_inst mlp_result_digit associatedReset
+Info: get_instance_interface_ports system_inst mlp_result_digit
+Info: get_instance_interface_port_property system_inst mlp_result_digit mlp_result_digit_result_digit ROLE
+Info: get_instance_interface_port_property system_inst mlp_result_digit mlp_result_digit_result_digit WIDTH
+Info: get_instance_interface_port_property system_inst mlp_result_digit mlp_result_digit_result_digit DIRECTION
+Info: set_instance_parameter_value system_inst_mlp_result_digit_bfm CLOCKED_SIGNAL 1
+Info: set_instance_parameter_value system_inst_mlp_result_digit_bfm ENABLE_RESET 1
+Info: set_instance_parameter_value system_inst_mlp_result_digit_bfm SIGNAL_ROLES result_digit
+Info: set_instance_parameter_value system_inst_mlp_result_digit_bfm SIGNAL_WIDTHS 4
+Info: set_instance_parameter_value system_inst_mlp_result_digit_bfm SIGNAL_DIRECTIONS input
+Info: get_instance_property system_inst_mlp_result_digit_bfm CLASS_NAME
+Info: get_instance_interfaces system_inst_mlp_result_digit_bfm
+Info: get_instance_interface_property system_inst_mlp_result_digit_bfm clk CLASS_NAME
+Info: get_instance_interface_property system_inst_mlp_result_digit_bfm conduit CLASS_NAME
+Info: get_instance_interface_property system_inst_mlp_result_digit_bfm reset CLASS_NAME
+Info: get_instance_property system_inst_mlp_result_digit_bfm CLASS_NAME
+Info: get_instance_interface_parameter_value system_inst mlp_result_digit associatedClock
+Info: get_instance_interface_property system_inst clk CLASS_NAME
+Info: get_instance_interfaces system_inst_clk_bfm
+Info: get_instance_interface_property system_inst_clk_bfm clk CLASS_NAME
+Info: add_connection system_inst_clk_bfm.clk system_inst_mlp_result_digit_bfm.clk
+Info: get_instance_interfaces system_inst_mlp_result_digit_bfm
+Info: get_instance_interface_property system_inst_mlp_result_digit_bfm clk CLASS_NAME
+Info: get_instance_interface_property system_inst_mlp_result_digit_bfm conduit CLASS_NAME
+Info: get_instance_interface_property system_inst_mlp_result_digit_bfm reset CLASS_NAME
+Info: get_instance_property system_inst_mlp_result_digit_bfm CLASS_NAME
+Info: get_instance_interface_parameter_value system_inst mlp_result_digit associatedReset
+Info: get_instance_interface_property system_inst reset CLASS_NAME
+Info: get_instance_interfaces system_inst_reset_bfm
+Info: get_instance_interface_property system_inst_reset_bfm clk CLASS_NAME
+Info: get_instance_interface_property system_inst_reset_bfm reset CLASS_NAME
+Info: add_connection system_inst_reset_bfm.reset system_inst_mlp_result_digit_bfm.reset
+Info: get_instance_interface_property system_inst mlp_result_digit CLASS_NAME
+Info: get_instance_interfaces system_inst_mlp_result_digit_bfm
+Info: get_instance_interface_property system_inst_mlp_result_digit_bfm clk CLASS_NAME
+Info: get_instance_interface_property system_inst_mlp_result_digit_bfm conduit CLASS_NAME
+Info: get_instance_interface_property system_inst_mlp_result_digit_bfm reset CLASS_NAME
+Info: add_connection system_inst_mlp_result_digit_bfm.conduit system_inst.mlp_result_digit
+Info: get_instance_interface_property system_inst mlp_result_valid CLASS_NAME
+Info: send_message Info TB_Gen: conduit_end found: mlp_result_valid
+Info: TB_Gen: conduit_end found: mlp_result_valid
+Info: get_instance_interface_property system_inst mlp_result_valid CLASS_NAME
+Info: add_instance system_inst_mlp_result_valid_bfm altera_conduit_bfm 
+Info: get_instance_property system_inst_mlp_result_valid_bfm CLASS_NAME
+Info: get_instance_interface_parameter_value system_inst mlp_result_valid associatedClock
+Info: get_instance_interface_parameter_value system_inst mlp_result_valid associatedReset
+Info: get_instance_interface_ports system_inst mlp_result_valid
+Info: get_instance_interface_port_property system_inst mlp_result_valid mlp_result_valid_result_valid ROLE
+Info: get_instance_interface_port_property system_inst mlp_result_valid mlp_result_valid_result_valid WIDTH
+Info: get_instance_interface_port_property system_inst mlp_result_valid mlp_result_valid_result_valid DIRECTION
+Info: set_instance_parameter_value system_inst_mlp_result_valid_bfm CLOCKED_SIGNAL 1
+Info: set_instance_parameter_value system_inst_mlp_result_valid_bfm ENABLE_RESET 1
+Info: set_instance_parameter_value system_inst_mlp_result_valid_bfm SIGNAL_ROLES result_valid
+Info: set_instance_parameter_value system_inst_mlp_result_valid_bfm SIGNAL_WIDTHS 1
+Info: set_instance_parameter_value system_inst_mlp_result_valid_bfm SIGNAL_DIRECTIONS input
+Info: get_instance_property system_inst_mlp_result_valid_bfm CLASS_NAME
+Info: get_instance_interfaces system_inst_mlp_result_valid_bfm
+Info: get_instance_interface_property system_inst_mlp_result_valid_bfm clk CLASS_NAME
+Info: get_instance_interface_property system_inst_mlp_result_valid_bfm conduit CLASS_NAME
+Info: get_instance_interface_property system_inst_mlp_result_valid_bfm reset CLASS_NAME
+Info: get_instance_property system_inst_mlp_result_valid_bfm CLASS_NAME
+Info: get_instance_interface_parameter_value system_inst mlp_result_valid associatedClock
+Info: get_instance_interface_property system_inst clk CLASS_NAME
+Info: get_instance_interfaces system_inst_clk_bfm
+Info: get_instance_interface_property system_inst_clk_bfm clk CLASS_NAME
+Info: add_connection system_inst_clk_bfm.clk system_inst_mlp_result_valid_bfm.clk
+Info: get_instance_interfaces system_inst_mlp_result_valid_bfm
+Info: get_instance_interface_property system_inst_mlp_result_valid_bfm clk CLASS_NAME
+Info: get_instance_interface_property system_inst_mlp_result_valid_bfm conduit CLASS_NAME
+Info: get_instance_interface_property system_inst_mlp_result_valid_bfm reset CLASS_NAME
+Info: get_instance_property system_inst_mlp_result_valid_bfm CLASS_NAME
+Info: get_instance_interface_parameter_value system_inst mlp_result_valid associatedReset
+Info: get_instance_interface_property system_inst reset CLASS_NAME
+Info: get_instance_interfaces system_inst_reset_bfm
+Info: get_instance_interface_property system_inst_reset_bfm clk CLASS_NAME
+Info: get_instance_interface_property system_inst_reset_bfm reset CLASS_NAME
+Info: add_connection system_inst_reset_bfm.reset system_inst_mlp_result_valid_bfm.reset
+Info: get_instance_interface_property system_inst mlp_result_valid CLASS_NAME
+Info: get_instance_interfaces system_inst_mlp_result_valid_bfm
+Info: get_instance_interface_property system_inst_mlp_result_valid_bfm clk CLASS_NAME
+Info: get_instance_interface_property system_inst_mlp_result_valid_bfm conduit CLASS_NAME
+Info: get_instance_interface_property system_inst_mlp_result_valid_bfm reset CLASS_NAME
+Info: add_connection system_inst_mlp_result_valid_bfm.conduit system_inst.mlp_result_valid
+Info: send_message Info TB_Gen: Saving testbench system: system_tb.qsys
+Info: TB_Gen: Saving testbench system: system_tb.qsys
+Info: save_system system_tb.qsys
+Info: send_message Info TB_Gen: TBGEN SUCCESSFUL
+Info: TB_Gen: TBGEN SUCCESSFUL
+Info: Testbench system: E:/ThuchanhHeThongNhung/SoC_DE10_TinyML/TinyML/system/testbench/system_tb.qsys
+Info: Done
+Info: qsys-generate E:\ThuchanhHeThongNhung\SoC_DE10_TinyML\TinyML\system.qsys --simulation=VERILOG --allow-mixed-language-simulation --testbench=STANDARD --testbench-simulation=VERILOG --allow-mixed-language-testbench-simulation --output-directory=E:\ThuchanhHeThongNhung\SoC_DE10_TinyML\TinyML\system\testbench\system_tb\simulation --family="Cyclone V" --part=5CSXFC6D6F31C6
+Progress: Loading testbench/system_tb.qsys
+Progress: Reading input file
+Progress: Adding system_inst [system 1.0]
+Progress: Parameterizing module system_inst
+Progress: Adding system_inst_clk_bfm [altera_avalon_clock_source 18.1]
+Progress: Parameterizing module system_inst_clk_bfm
+Progress: Adding system_inst_mlp_result_digit_bfm [altera_conduit_bfm 18.1]
+Progress: Parameterizing module system_inst_mlp_result_digit_bfm
+Progress: Adding system_inst_mlp_result_valid_bfm [altera_conduit_bfm 18.1]
+Progress: Parameterizing module system_inst_mlp_result_valid_bfm
+Progress: Adding system_inst_reset_bfm [altera_avalon_reset_source 18.1]
+Progress: Parameterizing module system_inst_reset_bfm
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Info: system_tb.system_inst.jtag_uart_0: JTAG UART IP input clock need to be at least double (2x) the operating frequency of JTAG TCK on board
+Info: system_tb.system_inst_clk_bfm: Elaborate: altera_clock_source
+Info: system_tb.system_inst_clk_bfm:            $Revision: #1 $
+Info: system_tb.system_inst_clk_bfm:            $Date: 2018/07/18 $
+Info: system_tb.system_inst_reset_bfm: Elaborate: altera_reset_source
+Info: system_tb.system_inst_reset_bfm:            $Revision: #1 $
+Info: system_tb.system_inst_reset_bfm:            $Date: 2018/07/18 $
+Info: system_tb.system_inst_reset_bfm: Reset is negatively asserted.
+Info: system_tb: Generating system_tb "system_tb" for SIM_VERILOG
+Info: system_inst: "system_tb" instantiated system "system_inst"
+Info: system_inst_clk_bfm: "system_tb" instantiated altera_avalon_clock_source "system_inst_clk_bfm"
+Info: system_inst_mlp_result_digit_bfm: "system_tb" instantiated altera_conduit_bfm "system_inst_mlp_result_digit_bfm"
+Info: Reusing file E:/ThuchanhHeThongNhung/SoC_DE10_TinyML/TinyML/system/testbench/system_tb/simulation/submodules/verbosity_pkg.sv
+Info: system_inst_mlp_result_valid_bfm: "system_tb" instantiated altera_conduit_bfm "system_inst_mlp_result_valid_bfm"
+Info: Reusing file E:/ThuchanhHeThongNhung/SoC_DE10_TinyML/TinyML/system/testbench/system_tb/simulation/submodules/verbosity_pkg.sv
+Info: system_inst_reset_bfm: "system_tb" instantiated altera_avalon_reset_source "system_inst_reset_bfm"
+Info: Reusing file E:/ThuchanhHeThongNhung/SoC_DE10_TinyML/TinyML/system/testbench/system_tb/simulation/submodules/verbosity_pkg.sv
+Info: jtag_uart_0: Starting RTL generation for module 'system_jtag_uart_0'
+Info: jtag_uart_0:   Generation command is [exec C:/intelfpga_lite/18.1/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga_lite/18.1/quartus/bin64/perl/lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_jtag_uart -- C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_jtag_uart/generate_rtl.pl --name=system_jtag_uart_0 --dir=C:/Users/anhng/AppData/Local/Temp/alt0564_6449816079738469241.dir/0031_jtag_uart_0_gen/ --quartus_dir=C:/intelfpga_lite/18.1/quartus --verilog --config=C:/Users/anhng/AppData/Local/Temp/alt0564_6449816079738469241.dir/0031_jtag_uart_0_gen//system_jtag_uart_0_component_configuration.pl  --do_build_sim=1    --sim_dir=C:/Users/anhng/AppData/Local/Temp/alt0564_6449816079738469241.dir/0031_jtag_uart_0_gen/  ]
+Info: jtag_uart_0: Done RTL generation for module 'system_jtag_uart_0'
+Info: jtag_uart_0: "system_inst" instantiated altera_avalon_jtag_uart "jtag_uart_0"
+Info: mlp_acc: "system_inst" instantiated mlp_accelerator "mlp_acc"
+Info: nios2_gen2_0: "system_inst" instantiated altera_nios2_gen2 "nios2_gen2_0"
+Info: onchip_memory2_0: Starting RTL generation for module 'system_onchip_memory2_0'
+Info: onchip_memory2_0:   Generation command is [exec C:/intelfpga_lite/18.1/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga_lite/18.1/quartus/bin64/perl/lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2 -- C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2/generate_rtl.pl --name=system_onchip_memory2_0 --dir=C:/Users/anhng/AppData/Local/Temp/alt0564_6449816079738469241.dir/0033_onchip_memory2_0_gen/ --quartus_dir=C:/intelfpga_lite/18.1/quartus --verilog --config=C:/Users/anhng/AppData/Local/Temp/alt0564_6449816079738469241.dir/0033_onchip_memory2_0_gen//system_onchip_memory2_0_component_configuration.pl  --do_build_sim=1    --sim_dir=C:/Users/anhng/AppData/Local/Temp/alt0564_6449816079738469241.dir/0033_onchip_memory2_0_gen/  ]
+Info: onchip_memory2_0: Done RTL generation for module 'system_onchip_memory2_0'
+Info: onchip_memory2_0: "system_inst" instantiated altera_avalon_onchip_memory2 "onchip_memory2_0"
+Info: timer_0: Starting RTL generation for module 'system_timer_0'
+Info: timer_0:   Generation command is [exec C:/intelFPGA_lite/18.1/quartus/bin64//perl/bin/perl.exe -I C:/intelFPGA_lite/18.1/quartus/bin64//perl/lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_timer -- C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_timer/generate_rtl.pl --name=system_timer_0 --dir=C:/Users/anhng/AppData/Local/Temp/alt0564_6449816079738469241.dir/0034_timer_0_gen/ --quartus_dir=C:/intelfpga_lite/18.1/quartus --verilog --config=C:/Users/anhng/AppData/Local/Temp/alt0564_6449816079738469241.dir/0034_timer_0_gen//system_timer_0_component_configuration.pl  --do_build_sim=1    --sim_dir=C:/Users/anhng/AppData/Local/Temp/alt0564_6449816079738469241.dir/0034_timer_0_gen/  ]
+Info: timer_0: Done RTL generation for module 'system_timer_0'
+Info: timer_0: "system_inst" instantiated altera_avalon_timer "timer_0"
+Info: avalon_st_adapter: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_001: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_002: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_003: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_004: Inserting error_adapter: error_adapter_0
+Info: mm_interconnect_0: "system_inst" instantiated altera_mm_interconnect "mm_interconnect_0"
+Info: irq_mapper: "system_inst" instantiated altera_irq_mapper "irq_mapper"
+Info: rst_controller: "system_inst" instantiated altera_reset_controller "rst_controller"
+Info: cpu: Starting RTL generation for module 'system_nios2_gen2_0_cpu'
+Info: cpu:   Generation command is [exec C:/intelFPGA_lite/18.1/quartus/bin64//eperlcmd.exe -I C:/intelFPGA_lite/18.1/quartus/bin64//perl/lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/18.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/cpu_lib -I C:/intelfpga_lite/18.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/nios_lib -I C:/intelfpga_lite/18.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2 -I C:/intelfpga_lite/18.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2 -- C:/intelfpga_lite/18.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/generate_rtl.epl --name=system_nios2_gen2_0_cpu --dir=C:/Users/anhng/AppData/Local/Temp/alt0564_6449816079738469241.dir/0037_cpu_gen/ --quartus_bindir=C:/intelFPGA_lite/18.1/quartus/bin64/ --verilog --config=C:/Users/anhng/AppData/Local/Temp/alt0564_6449816079738469241.dir/0037_cpu_gen//system_nios2_gen2_0_cpu_processor_configuration.pl  --do_build_sim=1    --sim_dir=C:/Users/anhng/AppData/Local/Temp/alt0564_6449816079738469241.dir/0037_cpu_gen/  ]
+Info: cpu: # 2026.04.21 14:27:22 (*) Starting Nios II generation
+Info: cpu: # 2026.04.21 14:27:22 (*)   Checking for plaintext license.
+Info: cpu: # 2026.04.21 14:27:22 (*)   Couldn't query license setup in Quartus directory C:/intelFPGA_lite/18.1/quartus/bin64/
+Info: cpu: # 2026.04.21 14:27:22 (*)   Defaulting to contents of LM_LICENSE_FILE environment variable
+Info: cpu: # 2026.04.21 14:27:22 (*)   LM_LICENSE_FILE environment variable is empty
+Info: cpu: # 2026.04.21 14:27:22 (*)   Plaintext license not found.
+Info: cpu: # 2026.04.21 14:27:22 (*)   No license required to generate encrypted Nios II/e.
+Info: cpu: # 2026.04.21 14:27:22 (*)   Elaborating CPU configuration settings
+Info: cpu: # 2026.04.21 14:27:22 (*)   Creating all objects for CPU
+Info: cpu: # 2026.04.21 14:27:23 (*)   Creating 'C:/Users/anhng/AppData/Local/Temp/alt0564_6449816079738469241.dir/0037_cpu_gen//system_nios2_gen2_0_cpu_nios2_waves.do'
+Info: cpu: # 2026.04.21 14:27:23 (*)   Generating RTL from CPU objects
+Info: cpu: # 2026.04.21 14:27:23 (*)   Creating plain-text RTL
+Info: cpu: # 2026.04.21 14:27:24 (*) Done Nios II generation
+Info: cpu: Done RTL generation for module 'system_nios2_gen2_0_cpu'
+Info: cpu: "nios2_gen2_0" instantiated altera_nios2_gen2_unit "cpu"
+Info: nios2_gen2_0_data_master_translator: "mm_interconnect_0" instantiated altera_merlin_master_translator "nios2_gen2_0_data_master_translator"
+Info: jtag_uart_0_avalon_jtag_slave_translator: "mm_interconnect_0" instantiated altera_merlin_slave_translator "jtag_uart_0_avalon_jtag_slave_translator"
+Info: nios2_gen2_0_data_master_agent: "mm_interconnect_0" instantiated altera_merlin_master_agent "nios2_gen2_0_data_master_agent"
+Info: jtag_uart_0_avalon_jtag_slave_agent: "mm_interconnect_0" instantiated altera_merlin_slave_agent "jtag_uart_0_avalon_jtag_slave_agent"
+Info: jtag_uart_0_avalon_jtag_slave_agent_rsp_fifo: "mm_interconnect_0" instantiated altera_avalon_sc_fifo "jtag_uart_0_avalon_jtag_slave_agent_rsp_fifo"
+Info: router: "mm_interconnect_0" instantiated altera_merlin_router "router"
+Info: router_001: "mm_interconnect_0" instantiated altera_merlin_router "router_001"
+Info: router_002: "mm_interconnect_0" instantiated altera_merlin_router "router_002"
+Info: router_003: "mm_interconnect_0" instantiated altera_merlin_router "router_003"
+Info: cmd_demux: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "cmd_demux"
+Info: cmd_demux_001: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "cmd_demux_001"
+Info: cmd_mux: "mm_interconnect_0" instantiated altera_merlin_multiplexer "cmd_mux"
+Info: cmd_mux_001: "mm_interconnect_0" instantiated altera_merlin_multiplexer "cmd_mux_001"
+Info: Reusing file E:/ThuchanhHeThongNhung/SoC_DE10_TinyML/TinyML/system/testbench/system_tb/simulation/submodules/altera_merlin_arbitrator.sv
+Info: rsp_demux: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "rsp_demux"
+Info: rsp_demux_001: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "rsp_demux_001"
+Info: rsp_mux: "mm_interconnect_0" instantiated altera_merlin_multiplexer "rsp_mux"
+Info: Reusing file E:/ThuchanhHeThongNhung/SoC_DE10_TinyML/TinyML/system/testbench/system_tb/simulation/submodules/altera_merlin_arbitrator.sv
+Info: rsp_mux_001: "mm_interconnect_0" instantiated altera_merlin_multiplexer "rsp_mux_001"
+Info: Reusing file E:/ThuchanhHeThongNhung/SoC_DE10_TinyML/TinyML/system/testbench/system_tb/simulation/submodules/altera_merlin_arbitrator.sv
+Info: avalon_st_adapter: "mm_interconnect_0" instantiated altera_avalon_st_adapter "avalon_st_adapter"
+Info: error_adapter_0: "avalon_st_adapter" instantiated error_adapter "error_adapter_0"
+Info: system_tb: Done "system_tb" with 34 modules, 57 files
+Info: qsys-generate succeeded.
+Info: sim-script-gen --spd=E:\ThuchanhHeThongNhung\SoC_DE10_TinyML\TinyML\system_tb.spd --output-directory=E:/ThuchanhHeThongNhung/SoC_DE10_TinyML/TinyML/system/testbench/ --use-relative-paths=true
+Info: Doing: ip-make-simscript --spd=E:\ThuchanhHeThongNhung\SoC_DE10_TinyML\TinyML\system_tb.spd --output-directory=E:/ThuchanhHeThongNhung/SoC_DE10_TinyML/TinyML/system/testbench/ --use-relative-paths=true
+Info: Generating the following file(s) for MODELSIM simulator in E:/ThuchanhHeThongNhung/SoC_DE10_TinyML/TinyML/system/testbench/ directory:
+Info: 	mentor/msim_setup.tcl
+Info: Generating the following file(s) for VCS simulator in E:/ThuchanhHeThongNhung/SoC_DE10_TinyML/TinyML/system/testbench/ directory:
+Info: 	synopsys/vcs/vcs_setup.sh
+Info: Generating the following file(s) for VCSMX simulator in E:/ThuchanhHeThongNhung/SoC_DE10_TinyML/TinyML/system/testbench/ directory:
+Info: 	synopsys/vcsmx/synopsys_sim.setup
+Info: 	synopsys/vcsmx/vcsmx_setup.sh
+Info: Generating the following file(s) for NCSIM simulator in E:/ThuchanhHeThongNhung/SoC_DE10_TinyML/TinyML/system/testbench/ directory:
+Info: 	cadence/cds.lib
+Info: 	cadence/hdl.var
+Info: 	cadence/ncsim_setup.sh
+Info: 	34 .cds.lib files in cadence/cds_libs/ directory
+Info: Generating the following file(s) for RIVIERA simulator in E:/ThuchanhHeThongNhung/SoC_DE10_TinyML/TinyML/system/testbench/ directory:
+Info: 	aldec/rivierapro_setup.tcl
+Info: For information on how to simulate your IP, see the explanatory comments in the simulator-specific subdirectories under E:/ThuchanhHeThongNhung/SoC_DE10_TinyML/TinyML/system/testbench/.
+Info: Regenerate these scripts whenever you make any change to any Quartus-generated IP in your project.
+Info: Finished: Create testbench Platform Designer system

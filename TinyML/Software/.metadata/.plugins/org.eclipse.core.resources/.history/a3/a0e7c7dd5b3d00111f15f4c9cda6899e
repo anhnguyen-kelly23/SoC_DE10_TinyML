@@ -1,0 +1,229 @@
+/*
+ * "Hello World" example.
+ *
+ * This example prints 'Hello from Nios II' to the STDOUT stream. It runs on
+ * the Nios II 'standard', 'full_featured', 'fast', and 'low_cost' example
+ * designs. It runs with or without the MicroC/OS-II RTOS and requires a STDOUT
+ * device in your system's hardware.
+ * The memory footprint of this hosted application is ~69 kbytes by default
+ * using the standard reference design.
+ *
+ * For a reduced footprint version of this template, and an explanation of how
+ * to reduce the memory footprint for a given application, see the
+ * "small_hello_world" template.
+ *
+ */
+
+/*============================================================================
+ * main.c -- Nios II Firmware for MNIST TinyML SoC
+ *============================================================================
+ * Test 10 images sequentially, display each result on HEX0 for ~5 seconds
+ *============================================================================*/
+
+#include "system.h"
+#include "io.h"
+#include "alt_types.h"
+#include "altera_avalon_jtag_uart_regs.h"
+#include "test_image.h"
+
+/*--- MLP Accelerator Register Offsets (byte address) ---*/
+#define MLP_REG_CTRL     0x0000    /* W: bit0=START, bit1=SOFT_RESET  */
+#define MLP_REG_STATUS   0x0004    /* R: bit0=BUSY, bit1=DONE         */
+#define MLP_REG_RESULT   0x0008    /* R: predicted digit 0-9           */
+#define MLP_REG_SCORE    0x000C    /* R: max score (INT32)              */
+#define MLP_REG_OUTPUT   0x0010    /* R: output[0]..output[9] (x4B)    */
+#define MLP_REG_INPUT    0x1000    /* W: pixel[0]..pixel[783] (x4B)    */
+
+#define MLP_CTRL_START   0x01
+#define MLP_CTRL_RESET   0x02
+#define MLP_STATUS_BUSY  0x01
+#define MLP_STATUS_DONE  0x02
+
+/* Delay ~5 seconds at 50MHz Nios II (rough busy-wait) */
+#define DELAY_5S_COUNT   25000000
+
+
+static void jtag_uart_putchar(alt_u32 base, alt_u8 ch)
+{
+    alt_u32 ctrl;
+    do {
+        ctrl = IORD_ALTERA_AVALON_JTAG_UART_CONTROL(base);
+    } while ((ctrl & ALTERA_AVALON_JTAG_UART_CONTROL_WSPACE_MSK) == 0);
+    IOWR_ALTERA_AVALON_JTAG_UART_DATA(base, ch);
+}
+
+static void jtag_print(alt_u32 base, const char *str)
+{
+    while (*str) {
+        jtag_uart_putchar(base, (alt_u8)*str++);
+    }
+}
+
+static void jtag_print_dec(alt_u32 base, int val)
+{
+    char buf[12];
+    int i = 0;
+    int neg = 0;
+
+    if (val < 0) { neg = 1; val = -val; }
+    if (val == 0) {
+        buf[i++] = '0';
+    } else {
+        while (val > 0) {
+            buf[i++] = '0' + (val % 10);
+            val /= 10;
+        }
+    }
+    if (neg) buf[i++] = '-';
+    while (i > 0) jtag_uart_putchar(base, (alt_u8)buf[--i]);
+}
+
+/*--- Delay function (busy-wait) ---*/
+static void delay_busy(alt_u32 count)
+{
+    volatile alt_u32 i;
+    for (i = 0; i < count; i++) {
+        /* do nothing */
+    }
+}
+
+/*--- MLP Accelerator Driver ---*/
+
+static inline void mlp_soft_reset(alt_u32 base)
+{
+    IOWR_32DIRECT(base, MLP_REG_CTRL, MLP_CTRL_RESET);
+}
+
+static inline void mlp_write_pixel(alt_u32 base, int index, alt_u8 value)
+{
+    IOWR_32DIRECT(base, MLP_REG_INPUT + (index << 2), (alt_u32)value);
+}
+
+static inline void mlp_start(alt_u32 base)
+{
+    IOWR_32DIRECT(base, MLP_REG_CTRL, MLP_CTRL_START);
+}
+
+static inline int mlp_is_done(alt_u32 base)
+{
+    return (IORD_32DIRECT(base, MLP_REG_STATUS) & MLP_STATUS_DONE) != 0;
+}
+
+static inline int mlp_get_result(alt_u32 base)
+{
+    return (int)(IORD_32DIRECT(base, MLP_REG_RESULT) & 0x0F);
+}
+
+static inline alt_32 mlp_get_score(alt_u32 base, int digit)
+{
+    return (alt_32)IORD_32DIRECT(base, MLP_REG_OUTPUT + (digit << 2));
+}
+int main(void)
+{
+#ifdef MLP_ACCELERATOR_0_BASE
+    const alt_u32 mlp_base = MLP_ACCELERATOR_0_BASE;
+#else
+    const alt_u32 mlp_base = 0x00010000;  /* Fallback */
+#endif
+
+#ifdef JTAG_UART_0_BASE
+    const alt_u32 uart_base = JTAG_UART_0_BASE;
+#else
+    const alt_u32 uart_base = 0x00041000;  /* Fallback */
+#endif
+
+    int img_idx, digit, i;
+    alt_32 max_score;
+
+    /* --- Banner --- */
+    jtag_print(uart_base, "\r\n");
+    jtag_print(uart_base, "================================================\r\n");
+    jtag_print(uart_base, "  MNIST Digit Recognition -- TinyML SoC\r\n");
+    jtag_print(uart_base, "  MLP: 784 -> 128 (Leaky ReLU) -> 10\r\n");
+    jtag_print(uart_base, "  Board: DE10-Standard (Cyclone V)\r\n");
+    jtag_print(uart_base, "  Mode: 10-image sequential test\r\n");
+    jtag_print(uart_base, "================================================\r\n\r\n");
+
+    /* === Loop through all 10 test images === */
+    for (img_idx = 0; img_idx < NUM_TEST_IMAGES; img_idx++) {
+
+        jtag_print(uart_base, "================================================\r\n");
+        jtag_print(uart_base, "  Image ");
+        jtag_print_dec(uart_base, img_idx + 1);
+        jtag_print(uart_base, " / ");
+        jtag_print_dec(uart_base, NUM_TEST_IMAGES);
+        jtag_print(uart_base, "\r\n");
+        jtag_print(uart_base, "================================================\r\n");
+
+        /* --- Step 1: Reset accelerator --- */
+        jtag_print(uart_base, "[1] Resetting MLP Accelerator...\r\n");
+        mlp_soft_reset(mlp_base);
+
+        /* --- Step 2: Load image pixels --- */
+        jtag_print(uart_base, "[2] Writing test image (784 pixels)...\r\n");
+        for (i = 0; i < 784; i++) {
+            mlp_write_pixel(mlp_base, i, test_images[img_idx][i]);
+        }
+        jtag_print(uart_base, "    Image loaded successfully.\r\n");
+
+        /* --- Step 3: Start inference --- */
+        jtag_print(uart_base, "[3] Starting inference...\r\n");
+        mlp_start(mlp_base);
+
+        jtag_print(uart_base, "    Waiting for hardware...\r\n");
+        while (!mlp_is_done(mlp_base)) {
+        }
+        jtag_print(uart_base, "    Inference complete!\r\n");
+
+        /* --- Step 4: Read result --- */
+        digit = mlp_get_result(mlp_base);
+        max_score = mlp_get_score(mlp_base, digit);
+
+        jtag_print(uart_base, "\r\n");
+        jtag_print(uart_base, "  Predicted digit: ");
+        jtag_print_dec(uart_base, digit);
+        jtag_print(uart_base, "\r\n");
+        jtag_print(uart_base, "  Max score:       ");
+        jtag_print_dec(uart_base, (int)max_score);
+        jtag_print(uart_base, "\r\n\r\n");
+
+        jtag_print(uart_base, "  Output scores:\r\n");
+        for (i = 0; i < 10; i++) {
+            jtag_print(uart_base, "    Digit ");
+            jtag_print_dec(uart_base, i);
+            jtag_print(uart_base, ": ");
+            jtag_print_dec(uart_base, (int)mlp_get_score(mlp_base, i));
+            if (i == digit) {
+                jtag_print(uart_base, "  <-- PREDICTED");
+            }
+            jtag_print(uart_base, "\r\n");
+        }
+
+        jtag_print(uart_base, "\r\n");
+        jtag_print(uart_base, "  HEX0 is now displaying: ");
+        jtag_print_dec(uart_base, digit);
+        jtag_print(uart_base, "\r\n");
+
+#ifdef LED_BASE
+        IOWR_32DIRECT(LED_BASE, 0, (1 << digit));
+#endif
+
+        /* --- Step 5: Wait ~5 seconds before next image --- */
+        if (img_idx < NUM_TEST_IMAGES - 1) {
+            jtag_print(uart_base, "  Waiting 5 seconds...\r\n\r\n");
+            delay_busy(DELAY_5S_COUNT);
+        }
+    }
+
+    /* === All done === */
+    jtag_print(uart_base, "\r\n");
+    jtag_print(uart_base, "================================================\r\n");
+    jtag_print(uart_base, "  ALL 10 IMAGES TESTED!\r\n");
+    jtag_print(uart_base, "  Last result remains on HEX0.\r\n");
+    jtag_print(uart_base, "================================================\r\n");
+
+    while (1) {
+    }
+
+    return 0;
+}

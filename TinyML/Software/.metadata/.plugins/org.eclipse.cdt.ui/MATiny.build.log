@@ -1,0 +1,9 @@
+16:11:07 **** Incremental Build of configuration Nios II for project MATiny ****
+make all 
+Info: Building ../MATiny_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../MATiny_bsp/
+[BSP build complete]
+[MATiny build complete]
+
+16:11:08 Build Finished (took 546ms)
+

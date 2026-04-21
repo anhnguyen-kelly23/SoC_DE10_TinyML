@@ -1,0 +1,22 @@
+
+State Machine - |mnist_soc_top|system:Nios_system|system_nios2_gen2_0:nios2_gen2_0|system_nios2_gen2_0_cpu:cpu|system_nios2_gen2_0_cpu_nios2_oci:the_system_nios2_gen2_0_cpu_nios2_oci|system_nios2_gen2_0_cpu_debug_slave_wrapper:the_system_nios2_gen2_0_cpu_debug_slave_wrapper|system_nios2_gen2_0_cpu_debug_slave_tck:the_system_nios2_gen2_0_cpu_debug_slave_tck|DRsize
+Name DRsize.101 DRsize.100 DRsize.011 DRsize.010 DRsize.001 DRsize.000 
+DRsize.000 0 0 0 0 0 0 
+DRsize.001 0 0 0 0 1 1 
+DRsize.010 0 0 0 1 0 1 
+DRsize.011 0 0 1 0 0 1 
+DRsize.100 0 1 0 0 0 1 
+DRsize.101 1 0 0 0 0 1 
+
+State Machine - |mnist_soc_top|system:Nios_system|mlp_accelerator:mlp_acc|state
+Name state.S_DONE state.S_ARGMAX state.S_L2_POST state.S_L2_MAC state.S_L2_INIT state.S_L1_POST state.S_L1_MAC state.S_L1_BIAS state.S_L1_INIT state.S_IDLE 
+state.S_IDLE 0 0 0 0 0 0 0 0 0 0 
+state.S_L1_INIT 0 0 0 0 0 0 0 0 1 1 
+state.S_L1_BIAS 0 0 0 0 0 0 0 1 0 1 
+state.S_L1_MAC 0 0 0 0 0 0 1 0 0 1 
+state.S_L1_POST 0 0 0 0 0 1 0 0 0 1 
+state.S_L2_INIT 0 0 0 0 1 0 0 0 0 1 
+state.S_L2_MAC 0 0 0 1 0 0 0 0 0 1 
+state.S_L2_POST 0 0 1 0 0 0 0 0 0 1 
+state.S_ARGMAX 0 1 0 0 0 0 0 0 0 1 
+state.S_DONE 1 0 0 0 0 0 0 0 0 1 

@@ -1,0 +1,187 @@
+//============================================================================
+// mnist_soc_top.v — SoC Top-Level for DE10-Standard
+//============================================================================
+// Connects the Platform Designer (Qsys) generated Nios II system to
+// DE10-Standard board pins. The mlp_accelerator is integrated as a
+// custom Avalon-MM slave inside Platform Designer.
+//
+// Platform Designer System ("nios_system") should contain:
+//   1. Nios II/e Processor
+//   2. On-Chip Memory (64 KB)
+//   3. JTAG UART (for debug via USB-Blaster)
+//   4. UART (RS-232, 115200 baud) — for image data
+//   5. System Timer
+//   6. PIO: LEDs (10-bit output)
+//   7. PIO: 7-Seg data (8-bit output, directly driving hex_decoder)
+//   8. mlp_accelerator (custom Avalon-MM slave)
+//
+// After generating the system in Platform Designer, the module
+// "nios_system" will be instantiated here.
+//============================================================================
+
+module mnist_soc_top (
+    // Clock & Reset
+    input  wire        CLOCK_50,       // 50 MHz clock
+    input  wire [3:0]  KEY,            // Push buttons (active-low)
+
+    // Switches
+    input  wire [9:0]  SW,
+
+    // LEDs
+    output wire [9:0]  LEDR,
+
+    // 7-Segment Displays (active-low)
+    output wire [6:0]  HEX0,
+    output wire [6:0]  HEX1,
+    output wire [6:0]  HEX2,
+    output wire [6:0]  HEX3,
+    output wire [6:0]  HEX4,
+    output wire [6:0]  HEX5,
+
+    // UART (directly from FPGA fabric, optional — can also use JTAG UART)
+    // If using GPIO for UART, assign appropriate pins
+    // input  wire        UART_RXD,
+    // output wire        UART_TXD,
+
+    // SDRAM (if needed by Nios II for larger programs)
+    output wire [12:0] DRAM_ADDR,
+    output wire [1:0]  DRAM_BA,
+    output wire        DRAM_CAS_N,
+    output wire        DRAM_CKE,
+    output wire        DRAM_CLK,
+    output wire        DRAM_CS_N,
+    inout  wire [15:0] DRAM_DQ,
+    output wire        DRAM_LDQM,
+    output wire        DRAM_RAS_N,
+    output wire        DRAM_UDQM,
+    output wire        DRAM_WE_N
+);
+
+    // ========================================================================
+    // System Reset (active-low KEY[0] → active-high)
+    // ========================================================================
+    wire sys_reset_n = KEY[0];
+
+    // ========================================================================
+    // Platform Designer System Instantiation
+    // ========================================================================
+    // NOTE: After generating your Nios II system in Platform Designer,
+    // uncomment and modify the instantiation below to match the generated
+    // module ports.
+    //
+    // The mlp_accelerator component should be added as a custom IP in
+    // Platform Designer with:
+    //   - Avalon-MM Slave interface
+    //   - Data width: 32 bits
+    //   - Address width: 11 bits (word-addressed)
+    //   - Read latency: 1
+    //   - Conduit for result_digit[3:0], result_valid, irq
+
+    wire [3:0] mlp_result_digit;
+    wire       mlp_result_valid;
+
+    /*
+    nios_system u_nios (
+        .clk_clk                  (CLOCK_50),
+        .reset_reset_n            (sys_reset_n),
+
+        // JTAG UART (directly connects via USB-Blaster, no external pins)
+
+        // UART (optional, external RS-232)
+        // .uart_0_rxd             (UART_RXD),
+        // .uart_0_txd             (UART_TXD),
+
+        // LEDs PIO
+        .leds_external_export     (LEDR),
+
+        // 7-Seg PIO — output digit value to display
+        // Nios II writes the digit (0-9) to this PIO
+        // Could also use mlp_result_digit conduit directly
+        //.seven_seg_external_export(seven_seg_val),
+
+        // MLP Accelerator conduit outputs
+        .mlp_acc_result_digit     (mlp_result_digit),
+        .mlp_acc_result_valid     (mlp_result_valid),
+
+        // SDRAM (if configured)
+        .sdram_wire_addr          (DRAM_ADDR),
+        .sdram_wire_ba            (DRAM_BA),
+        .sdram_wire_cas_n         (DRAM_CAS_N),
+        .sdram_wire_cke           (DRAM_CKE),
+        .sdram_wire_cs_n          (DRAM_CS_N),
+        .sdram_wire_dq            (DRAM_DQ),
+        .sdram_wire_dqm           ({DRAM_UDQM, DRAM_LDQM}),
+        .sdram_wire_ras_n         (DRAM_RAS_N),
+        .sdram_wire_we_n          (DRAM_WE_N)
+    );
+
+    // SDRAM clock output
+    assign DRAM_CLK = CLOCK_50;
+    */
+
+    // ========================================================================
+    // Temporary: Standalone MLP Accelerator (for testing without Nios II)
+    // ========================================================================
+    // This instantiation allows testing the accelerator standalone
+    // before Platform Designer integration.
+
+    mlp_accelerator #(
+        .INPUT_SIZE       (784),
+        .HIDDEN_SIZE      (128),
+        .OUTPUT_SIZE      (10),
+        .L1_REQUANT_MULT  (16'd12),
+        .L1_REQUANT_SHIFT (5'd15),
+        .LEAKY_SHIFT      (3),
+        .W1_INIT_FILE     ("w1_int8.hex"),
+        .W2_INIT_FILE     ("w2_int8.hex"),
+        .B1_INIT_FILE     ("b1_int32.hex")
+    ) u_mlp (
+        .clk           (CLOCK_50),
+        .reset         (~sys_reset_n),
+        .avs_address   (11'd0),
+        .avs_read      (1'b0),
+        .avs_write     (1'b0),
+        .avs_writedata (32'd0),
+        .avs_readdata  (),
+        .result_digit  (mlp_result_digit),
+        .result_valid  (mlp_result_valid),
+        .irq           ()
+    );
+
+    // ========================================================================
+    // 7-Segment Display
+    // ========================================================================
+    // HEX0: show predicted digit
+    hex_decoder u_hex0 (
+        .digit    (mlp_result_digit),
+        .segments (HEX0)
+    );
+
+    // HEX1-HEX5: blank (all segments off)
+    assign HEX1 = 7'b1111111;
+    assign HEX2 = 7'b1111111;
+    assign HEX3 = 7'b1111111;
+    assign HEX4 = 7'b1111111;
+    assign HEX5 = 7'b1111111;
+
+    // ========================================================================
+    // LED Status
+    // ========================================================================
+    assign LEDR[0] = mlp_result_valid;  // Inference done
+    assign LEDR[9:1] = 9'd0;
+
+    // ========================================================================
+    // SDRAM defaults (when Nios not instantiated)
+    // ========================================================================
+    assign DRAM_ADDR  = 13'd0;
+    assign DRAM_BA    = 2'd0;
+    assign DRAM_CAS_N = 1'b1;
+    assign DRAM_CKE   = 1'b0;
+    assign DRAM_CLK   = 1'b0;
+    assign DRAM_CS_N  = 1'b1;
+    assign DRAM_LDQM  = 1'b0;
+    assign DRAM_RAS_N = 1'b1;
+    assign DRAM_UDQM  = 1'b0;
+    assign DRAM_WE_N  = 1'b1;
+
+endmodule

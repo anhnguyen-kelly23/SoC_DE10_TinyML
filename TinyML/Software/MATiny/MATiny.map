@@ -1,0 +1,1013 @@
+Archive member included to satisfy reference by file (symbol)
+
+c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/mno-hw-mul\libgcc.a(lib2-divmod.o)
+                              obj/default/hello_world.o (__divsi3)
+c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/mno-hw-mul\libgcc.a(lib2-mul.o)
+                              obj/default/hello_world.o (__mulsi3)
+../MATiny_bsp/\libhal_bsp.a(alt_iic.o)
+                              obj/default/hello_world.o (alt_ic_isr_register)
+../MATiny_bsp/\libhal_bsp.a(alt_iic_isr_register.o)
+                              ../MATiny_bsp/\libhal_bsp.a(alt_iic.o) (alt_iic_isr_register)
+../MATiny_bsp/\libhal_bsp.a(alt_irq_entry.o)
+                              ../MATiny_bsp/\libhal_bsp.a(alt_iic_isr_register.o) (alt_irq_entry)
+../MATiny_bsp/\libhal_bsp.a(alt_irq_handler.o)
+                              ../MATiny_bsp/\libhal_bsp.a(alt_iic_isr_register.o) (alt_irq)
+../MATiny_bsp/\libhal_bsp.a(alt_irq_vars.o)
+                              ../MATiny_bsp/\libhal_bsp.a(alt_iic.o) (alt_irq_active)
+../MATiny_bsp/\libhal_bsp.a(alt_load.o)
+                              ../MATiny_bsp//obj/HAL/src/crt0.o (alt_load)
+../MATiny_bsp/\libhal_bsp.a(alt_main.o)
+                              ../MATiny_bsp//obj/HAL/src/crt0.o (alt_main)
+../MATiny_bsp/\libhal_bsp.a(alt_sys_init.o)
+                              ../MATiny_bsp/\libhal_bsp.a(alt_main.o) (alt_irq_init)
+../MATiny_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_fd.o)
+                              ../MATiny_bsp/\libhal_bsp.a(alt_sys_init.o) (altera_avalon_jtag_uart_read_fd)
+../MATiny_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_read.o)
+                              ../MATiny_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_fd.o) (altera_avalon_jtag_uart_read)
+../MATiny_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_write.o)
+                              ../MATiny_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_fd.o) (altera_avalon_jtag_uart_write)
+../MATiny_bsp/\libhal_bsp.a(altera_avalon_timer_sc.o)
+                              ../MATiny_bsp/\libhal_bsp.a(alt_sys_init.o) (alt_avalon_timer_sc_init)
+../MATiny_bsp/\libhal_bsp.a(alt_close.o)
+                              ../MATiny_bsp/\libhal_bsp.a(alt_main.o) (close)
+../MATiny_bsp/\libhal_bsp.a(alt_dcache_flush_all.o)
+                              ../MATiny_bsp/\libhal_bsp.a(alt_load.o) (alt_dcache_flush_all)
+../MATiny_bsp/\libhal_bsp.a(alt_dev.o)
+                              ../MATiny_bsp/\libhal_bsp.a(alt_sys_init.o) (alt_dev_list)
+../MATiny_bsp/\libhal_bsp.a(alt_dev_llist_insert.o)
+                              ../MATiny_bsp/\libhal_bsp.a(alt_sys_init.o) (alt_dev_llist_insert)
+../MATiny_bsp/\libhal_bsp.a(alt_do_ctors.o)
+                              ../MATiny_bsp/\libhal_bsp.a(alt_main.o) (_do_ctors)
+../MATiny_bsp/\libhal_bsp.a(alt_do_dtors.o)
+                              ../MATiny_bsp/\libhal_bsp.a(alt_main.o) (_do_dtors)
+../MATiny_bsp/\libhal_bsp.a(alt_errno.o)
+                              ../MATiny_bsp/\libhal_bsp.a(alt_close.o) (alt_errno)
+../MATiny_bsp/\libhal_bsp.a(alt_exception_entry.o)
+                              ../MATiny_bsp/\libhal_bsp.a(alt_irq_entry.o) (alt_exception)
+../MATiny_bsp/\libhal_bsp.a(alt_icache_flush_all.o)
+                              ../MATiny_bsp/\libhal_bsp.a(alt_load.o) (alt_icache_flush_all)
+../MATiny_bsp/\libhal_bsp.a(alt_instruction_exception_entry.o)
+                              ../MATiny_bsp/\libhal_bsp.a(alt_exception_entry.o) (alt_instruction_exception_entry)
+../MATiny_bsp/\libhal_bsp.a(alt_io_redirect.o)
+                              ../MATiny_bsp/\libhal_bsp.a(alt_main.o) (alt_io_redirect)
+../MATiny_bsp/\libhal_bsp.a(alt_open.o)
+                              ../MATiny_bsp/\libhal_bsp.a(alt_io_redirect.o) (open)
+../MATiny_bsp/\libhal_bsp.a(alt_release_fd.o)
+                              ../MATiny_bsp/\libhal_bsp.a(alt_close.o) (alt_release_fd)
+../MATiny_bsp/\libhal_bsp.a(alt_tick.o)
+                              ../MATiny_bsp/\libhal_bsp.a(altera_avalon_timer_sc.o) (_alt_tick_rate)
+../MATiny_bsp/\libhal_bsp.a(altera_nios2_gen2_irq.o)
+                              ../MATiny_bsp/\libhal_bsp.a(alt_sys_init.o) (altera_nios2_gen2_irq_init)
+../MATiny_bsp/\libhal_bsp.a(alt_find_dev.o)
+                              ../MATiny_bsp/\libhal_bsp.a(alt_open.o) (alt_find_dev)
+../MATiny_bsp/\libhal_bsp.a(alt_find_file.o)
+                              ../MATiny_bsp/\libhal_bsp.a(alt_open.o) (alt_find_file)
+../MATiny_bsp/\libhal_bsp.a(alt_get_fd.o)
+                              ../MATiny_bsp/\libhal_bsp.a(alt_open.o) (alt_get_fd)
+c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-atexit.o)
+                              ../MATiny_bsp/\libhal_bsp.a(alt_main.o) (atexit)
+c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-exit.o)
+                              ../MATiny_bsp/\libhal_bsp.a(alt_main.o) (exit)
+c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-int_errno.o)
+                              ../MATiny_bsp/\libhal_bsp.a(alt_close.o) (errno)
+c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-memcmp.o)
+                              ../MATiny_bsp/\libhal_bsp.a(alt_find_dev.o) (memcmp)
+c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-strlen.o)
+                              ../MATiny_bsp/\libhal_bsp.a(alt_find_dev.o) (strlen)
+c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-__atexit.o)
+                              c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-atexit.o) (__register_exitproc)
+c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-__call_atexit.o)
+                              c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-exit.o) (__call_exitprocs)
+c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-impure.o)
+                              c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-__atexit.o) (_global_impure_ptr)
+../MATiny_bsp/\libhal_bsp.a(alt_exit.o)
+                              c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-exit.o) (_exit)
+
+Allocating common symbols
+Common symbol       size              file
+
+alt_irq             0x100             ../MATiny_bsp/\libhal_bsp.a(alt_irq_handler.o)
+errno               0x4               c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-int_errno.o)
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+reset            0x0000000000008000 0x0000000000000020
+onchip_memory2_0 0x0000000000008020 0x0000000000007fe0
+*default*        0x0000000000000000 0xffffffffffffffff
+
+Linker script and memory map
+
+LOAD ../MATiny_bsp//obj/HAL/src/crt0.o
+LOAD obj/default/hello_world.o
+LOAD c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libstdc++.a
+LOAD c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libm.a
+LOAD c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/mno-hw-mul\libgcc.a
+START GROUP
+LOAD c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a
+LOAD c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/mno-hw-mul\libgcc.a
+LOAD ../MATiny_bsp/\libhal_bsp.a
+LOAD c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libm.a
+END GROUP
+LOAD c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/mno-hw-mul\libgcc.a
+                0x0000000000008000                __alt_mem_onchip_memory2_0 = 0x8000
+
+.entry          0x0000000000008000       0x20
+ *(.entry)
+ .entry         0x0000000000008000       0x20 ../MATiny_bsp//obj/HAL/src/crt0.o
+                0x0000000000008000                __reset
+
+.exceptions     0x0000000000008020      0x210
+                0x0000000000008020                PROVIDE (__ram_exceptions_start, ABSOLUTE (.))
+                0x0000000000008020                . = ALIGN (0x20)
+ *(.irq)
+ *(.exceptions.entry.label)
+ .exceptions.entry.label
+                0x0000000000008020        0x0 ../MATiny_bsp/\libhal_bsp.a(alt_irq_entry.o)
+                0x0000000000008020                alt_irq_entry
+ .exceptions.entry.label
+                0x0000000000008020        0x0 ../MATiny_bsp/\libhal_bsp.a(alt_exception_entry.o)
+                0x0000000000008020                alt_exception
+ *(.exceptions.entry.user)
+ *(.exceptions.entry.ecc_fatal)
+ *(.exceptions.entry)
+ .exceptions.entry
+                0x0000000000008020       0x54 ../MATiny_bsp/\libhal_bsp.a(alt_exception_entry.o)
+ *(.exceptions.irqtest.user)
+ *(.exceptions.irqtest)
+ .exceptions.irqtest
+                0x0000000000008074       0x10 ../MATiny_bsp/\libhal_bsp.a(alt_irq_entry.o)
+ *(.exceptions.irqhandler.user)
+ *(.exceptions.irqhandler)
+ .exceptions.irqhandler
+                0x0000000000008084        0x4 ../MATiny_bsp/\libhal_bsp.a(alt_irq_entry.o)
+ *(.exceptions.irqreturn.user)
+ *(.exceptions.irqreturn)
+ .exceptions.irqreturn
+                0x0000000000008088        0x4 ../MATiny_bsp/\libhal_bsp.a(alt_irq_entry.o)
+ *(.exceptions.notirq.label)
+ .exceptions.notirq.label
+                0x000000000000808c        0x0 ../MATiny_bsp/\libhal_bsp.a(alt_irq_entry.o)
+ *(.exceptions.notirq.user)
+ *(.exceptions.notirq)
+ .exceptions.notirq
+                0x000000000000808c        0x8 ../MATiny_bsp/\libhal_bsp.a(alt_exception_entry.o)
+ *(.exceptions.soft.user)
+ *(.exceptions.soft)
+ *(.exceptions.unknown.user)
+ *(.exceptions.unknown)
+ .exceptions.unknown
+                0x0000000000008094       0x14 ../MATiny_bsp/\libhal_bsp.a(alt_exception_entry.o)
+ *(.exceptions.exit.label)
+ .exceptions.exit.label
+                0x00000000000080a8        0x0 ../MATiny_bsp/\libhal_bsp.a(alt_irq_entry.o)
+ .exceptions.exit.label
+                0x00000000000080a8        0x0 ../MATiny_bsp/\libhal_bsp.a(alt_exception_entry.o)
+ *(.exceptions.exit.user)
+ *(.exceptions.exit)
+ .exceptions.exit
+                0x00000000000080a8       0x54 ../MATiny_bsp/\libhal_bsp.a(alt_exception_entry.o)
+ *(.exceptions)
+ .exceptions    0x00000000000080fc       0xd4 ../MATiny_bsp/\libhal_bsp.a(alt_irq_handler.o)
+                0x00000000000080fc                alt_irq_handler
+ .exceptions    0x00000000000081d0       0x60 ../MATiny_bsp/\libhal_bsp.a(alt_instruction_exception_entry.o)
+                0x00000000000081d0                alt_instruction_exception_entry
+                0x0000000000008230                PROVIDE (__ram_exceptions_end, ABSOLUTE (.))
+                0x0000000000008020                PROVIDE (__flash_exceptions_start, LOADADDR (.exceptions))
+
+.text           0x0000000000008230     0x2264
+                [!provide]                        PROVIDE (stext, ABSOLUTE (.))
+ *(.interp)
+ *(.hash)
+ *(.dynsym)
+ *(.dynstr)
+ *(.gnu.version)
+ *(.gnu.version_d)
+ *(.gnu.version_r)
+ *(.rel.init)
+ *(.rela.init)
+ *(.rel.text .rel.text.* .rel.gnu.linkonce.t.*)
+ *(.rela.text .rela.text.* .rela.gnu.linkonce.t.*)
+ *(.rel.fini)
+ *(.rela.fini)
+ *(.rel.rodata .rel.rodata.* .rel.gnu.linkonce.r.*)
+ *(.rela.rodata .rela.rodata.* .rela.gnu.linkonce.r.*)
+ *(.rel.data .rel.data.* .rel.gnu.linkonce.d.*)
+ *(.rela.data .rela.data.* .rela.gnu.linkonce.d.*)
+ *(.rel.tdata .rel.tdata.* .rel.gnu.linkonce.td.*)
+ *(.rela.tdata .rela.tdata.* .rela.gnu.linkonce.td.*)
+ *(.rel.tbss .rel.tbss.* .rel.gnu.linkonce.tb.*)
+ *(.rela.tbss .rela.tbss.* .rela.gnu.linkonce.tb.*)
+ *(.rel.ctors)
+ *(.rela.ctors)
+ *(.rel.dtors)
+ *(.rela.dtors)
+ *(.rel.got)
+ *(.rela.got)
+ *(.rel.sdata .rel.sdata.* .rel.gnu.linkonce.s.*)
+ *(.rela.sdata .rela.sdata.* .rela.gnu.linkonce.s.*)
+ *(.rel.sbss .rel.sbss.* .rel.gnu.linkonce.sb.*)
+ *(.rela.sbss .rela.sbss.* .rela.gnu.linkonce.sb.*)
+ *(.rel.sdata2 .rel.sdata2.* .rel.gnu.linkonce.s2.*)
+ *(.rela.sdata2 .rela.sdata2.* .rela.gnu.linkonce.s2.*)
+ *(.rel.sbss2 .rel.sbss2.* .rel.gnu.linkonce.sb2.*)
+ *(.rela.sbss2 .rela.sbss2.* .rela.gnu.linkonce.sb2.*)
+ *(.rel.bss .rel.bss.* .rel.gnu.linkonce.b.*)
+ *(.rela.bss .rela.bss.* .rela.gnu.linkonce.b.*)
+ *(.rel.plt)
+ *(.rela.plt)
+ *(.rel.dyn)
+ *(.init)
+ *(.plt)
+ *(.text .stub .text.* .gnu.linkonce.t.*)
+ .text          0x0000000000008230       0x3c ../MATiny_bsp//obj/HAL/src/crt0.o
+                0x0000000000008230                _start
+ .text          0x000000000000826c      0x874 obj/default/hello_world.o
+                0x000000000000826c                timer_Init
+                0x00000000000082e0                Timer_IRQ_Handler
+                0x0000000000008700                main
+ .text          0x0000000000008ae0      0x1b4 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/mno-hw-mul\libgcc.a(lib2-divmod.o)
+                0x0000000000008ae0                __divsi3
+                0x0000000000008b64                __modsi3
+                0x0000000000008bd8                __udivsi3
+                0x0000000000008c3c                __umodsi3
+ .text          0x0000000000008c94       0x28 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/mno-hw-mul\libgcc.a(lib2-mul.o)
+                0x0000000000008c94                __mulsi3
+ .text          0x0000000000008cbc      0x1b0 ../MATiny_bsp/\libhal_bsp.a(alt_iic.o)
+                0x0000000000008cbc                alt_ic_isr_register
+                0x0000000000008d0c                alt_ic_irq_enable
+                0x0000000000008d94                alt_ic_irq_disable
+                0x0000000000008e20                alt_ic_irq_enabled
+ .text          0x0000000000008e6c       0xf0 ../MATiny_bsp/\libhal_bsp.a(alt_iic_isr_register.o)
+                0x0000000000008e6c                alt_iic_isr_register
+ .text          0x0000000000008f5c        0x0 ../MATiny_bsp/\libhal_bsp.a(alt_irq_entry.o)
+ .text          0x0000000000008f5c        0x0 ../MATiny_bsp/\libhal_bsp.a(alt_irq_handler.o)
+ .text          0x0000000000008f5c        0x0 ../MATiny_bsp/\libhal_bsp.a(alt_irq_vars.o)
+ .text          0x0000000000008f5c       0xec ../MATiny_bsp/\libhal_bsp.a(alt_load.o)
+                0x0000000000008fc4                alt_load
+ .text          0x0000000000009048       0x7c ../MATiny_bsp/\libhal_bsp.a(alt_main.o)
+                0x0000000000009048                alt_main
+ .text          0x00000000000090c4       0xb8 ../MATiny_bsp/\libhal_bsp.a(alt_sys_init.o)
+                0x00000000000090f8                alt_irq_init
+                0x0000000000009130                alt_sys_init
+ .text          0x000000000000917c       0xc0 ../MATiny_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_fd.o)
+                0x000000000000917c                altera_avalon_jtag_uart_read_fd
+                0x00000000000091dc                altera_avalon_jtag_uart_write_fd
+ .text          0x000000000000923c       0xec ../MATiny_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_read.o)
+                0x000000000000923c                altera_avalon_jtag_uart_read
+ .text          0x0000000000009328       0x94 ../MATiny_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_write.o)
+                0x0000000000009328                altera_avalon_jtag_uart_write
+ .text          0x00000000000093bc       0xf4 ../MATiny_bsp/\libhal_bsp.a(altera_avalon_timer_sc.o)
+                0x0000000000009434                alt_avalon_timer_sc_init
+ .text          0x00000000000094b0      0x114 ../MATiny_bsp/\libhal_bsp.a(alt_close.o)
+                0x00000000000094ec                close
+ .text          0x00000000000095c4       0x20 ../MATiny_bsp/\libhal_bsp.a(alt_dcache_flush_all.o)
+                0x00000000000095c4                alt_dcache_flush_all
+ .text          0x00000000000095e4       0x2c ../MATiny_bsp/\libhal_bsp.a(alt_dev.o)
+ .text          0x0000000000009610       0xe0 ../MATiny_bsp/\libhal_bsp.a(alt_dev_llist_insert.o)
+                0x000000000000964c                alt_dev_llist_insert
+ .text          0x00000000000096f0       0x60 ../MATiny_bsp/\libhal_bsp.a(alt_do_ctors.o)
+                0x00000000000096f0                _do_ctors
+ .text          0x0000000000009750       0x60 ../MATiny_bsp/\libhal_bsp.a(alt_do_dtors.o)
+                0x0000000000009750                _do_dtors
+ .text          0x00000000000097b0        0x0 ../MATiny_bsp/\libhal_bsp.a(alt_errno.o)
+ .text          0x00000000000097b0        0x0 ../MATiny_bsp/\libhal_bsp.a(alt_exception_entry.o)
+ .text          0x00000000000097b0       0x20 ../MATiny_bsp/\libhal_bsp.a(alt_icache_flush_all.o)
+                0x00000000000097b0                alt_icache_flush_all
+ .text          0x00000000000097d0       0x9c ../MATiny_bsp/\libhal_bsp.a(alt_instruction_exception_entry.o)
+                0x00000000000097d0                alt_exception_cause_generated_bad_addr
+ .text          0x000000000000986c      0x160 ../MATiny_bsp/\libhal_bsp.a(alt_io_redirect.o)
+                0x0000000000009950                alt_io_redirect
+ .text          0x00000000000099cc      0x284 ../MATiny_bsp/\libhal_bsp.a(alt_open.o)
+                0x0000000000009af4                open
+ .text          0x0000000000009c50       0x84 ../MATiny_bsp/\libhal_bsp.a(alt_release_fd.o)
+                0x0000000000009c50                alt_release_fd
+ .text          0x0000000000009cd4      0x1a4 ../MATiny_bsp/\libhal_bsp.a(alt_tick.o)
+                0x0000000000009cd4                alt_alarm_stop
+                0x0000000000009d70                alt_tick
+ .text          0x0000000000009e78       0x24 ../MATiny_bsp/\libhal_bsp.a(altera_nios2_gen2_irq.o)
+                0x0000000000009e78                altera_nios2_gen2_irq_init
+ .text          0x0000000000009e9c       0x90 ../MATiny_bsp/\libhal_bsp.a(alt_find_dev.o)
+                0x0000000000009e9c                alt_find_dev
+ .text          0x0000000000009f2c      0x108 ../MATiny_bsp/\libhal_bsp.a(alt_find_file.o)
+                0x0000000000009f2c                alt_find_file
+ .text          0x000000000000a034       0xc4 ../MATiny_bsp/\libhal_bsp.a(alt_get_fd.o)
+                0x000000000000a034                alt_get_fd
+ .text          0x000000000000a0f8        0x0 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-atexit.o)
+ .text.atexit   0x000000000000a0f8       0x14 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-atexit.o)
+                0x000000000000a0f8                atexit
+ .text          0x000000000000a10c        0x0 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-exit.o)
+ .text.exit     0x000000000000a10c       0x20 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-exit.o)
+                0x000000000000a10c                exit
+ .text          0x000000000000a12c        0x0 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-int_errno.o)
+ .text          0x000000000000a12c        0x0 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-memcmp.o)
+ .text.memcmp   0x000000000000a12c       0x30 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-memcmp.o)
+                0x000000000000a12c                memcmp
+ .text          0x000000000000a15c        0x0 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-strlen.o)
+ .text.strlen   0x000000000000a15c       0x1c c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-strlen.o)
+                0x000000000000a15c                strlen
+ .text          0x000000000000a178        0x0 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-__atexit.o)
+ .text.__register_exitproc
+                0x000000000000a178      0x158 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-__atexit.o)
+                0x000000000000a178                __register_exitproc
+ .text          0x000000000000a2d0        0x0 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-__call_atexit.o)
+ .text.__call_exitprocs
+                0x000000000000a2d0      0x190 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-__call_atexit.o)
+                0x000000000000a2d0                __call_exitprocs
+ .text          0x000000000000a460        0x0 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-impure.o)
+ .text          0x000000000000a460       0x34 ../MATiny_bsp/\libhal_bsp.a(alt_exit.o)
+                0x000000000000a460                _exit
+ *(.gnu.warning.*)
+ *(.fini)
+                [!provide]                        PROVIDE (__etext, ABSOLUTE (.))
+                [!provide]                        PROVIDE (_etext, ABSOLUTE (.))
+                [!provide]                        PROVIDE (etext, ABSOLUTE (.))
+ *(.eh_frame_hdr)
+                0x000000000000a494                . = ALIGN (0x4)
+                [!provide]                        PROVIDE (__preinit_array_start, ABSOLUTE (.))
+ *(.preinit_array)
+                [!provide]                        PROVIDE (__preinit_array_end, ABSOLUTE (.))
+                [!provide]                        PROVIDE (__init_array_start, ABSOLUTE (.))
+ *(.init_array)
+                [!provide]                        PROVIDE (__init_array_end, ABSOLUTE (.))
+                [!provide]                        PROVIDE (__fini_array_start, ABSOLUTE (.))
+ *(.fini_array)
+                [!provide]                        PROVIDE (__fini_array_end, ABSOLUTE (.))
+ *(.eh_frame)
+ *(.gcc_except_table .gcc_except_table.*)
+ *(.dynamic)
+                0x000000000000a494                PROVIDE (__CTOR_LIST__, ABSOLUTE (.))
+ *(.ctors)
+ *(SORT(.ctors.*))
+                0x000000000000a494                PROVIDE (__CTOR_END__, ABSOLUTE (.))
+                0x000000000000a494                PROVIDE (__DTOR_LIST__, ABSOLUTE (.))
+ *(.dtors)
+ *(SORT(.dtors.*))
+                0x000000000000a494                PROVIDE (__DTOR_END__, ABSOLUTE (.))
+ *(.jcr)
+                0x000000000000a494                . = ALIGN (0x4)
+
+.rodata         0x000000000000a494     0x21e8
+                0x000000000000a494                PROVIDE (__ram_rodata_start, ABSOLUTE (.))
+                0x000000000000a494                . = ALIGN (0x4)
+ *(.rodata .rodata.* .gnu.linkonce.r.*)
+ .rodata        0x000000000000a494     0x21b1 obj/default/hello_world.o
+                0x000000000000a494                test_images
+ *fill*         0x000000000000c645        0x3 
+ .rodata        0x000000000000c648       0x11 ../MATiny_bsp/\libhal_bsp.a(alt_main.o)
+ *fill*         0x000000000000c659        0x3 
+ .rodata        0x000000000000c65c       0x11 ../MATiny_bsp/\libhal_bsp.a(alt_sys_init.o)
+ *fill*         0x000000000000c66d        0x3 
+ .rodata        0x000000000000c670        0xa ../MATiny_bsp/\libhal_bsp.a(alt_dev.o)
+ *(.rodata1)
+                0x000000000000c67c                . = ALIGN (0x4)
+ *fill*         0x000000000000c67a        0x2 
+                0x000000000000c67c                PROVIDE (__ram_rodata_end, ABSOLUTE (.))
+                0x000000000000a494                PROVIDE (__flash_rodata_start, LOADADDR (.rodata))
+
+.rwdata         0x000000000000c67c      0x2e0 load address 0x000000000000c95c
+                0x000000000000c67c                PROVIDE (__ram_rwdata_start, ABSOLUTE (.))
+                0x000000000000c67c                . = ALIGN (0x4)
+ *(.got.plt)
+ *(.got)
+ *(.data1)
+ *(.data .data.* .gnu.linkonce.d.*)
+ .data          0x000000000000c67c        0x0 ../MATiny_bsp//obj/HAL/src/crt0.o
+ .data          0x000000000000c67c        0x0 obj/default/hello_world.o
+ .data          0x000000000000c67c        0x0 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/mno-hw-mul\libgcc.a(lib2-divmod.o)
+ .data          0x000000000000c67c        0x0 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/mno-hw-mul\libgcc.a(lib2-mul.o)
+ .data          0x000000000000c67c        0x0 ../MATiny_bsp/\libhal_bsp.a(alt_iic.o)
+ .data          0x000000000000c67c        0x0 ../MATiny_bsp/\libhal_bsp.a(alt_iic_isr_register.o)
+ .data          0x000000000000c67c        0x0 ../MATiny_bsp/\libhal_bsp.a(alt_irq_entry.o)
+ .data          0x000000000000c67c        0x0 ../MATiny_bsp/\libhal_bsp.a(alt_irq_handler.o)
+ .data          0x000000000000c67c        0x0 ../MATiny_bsp/\libhal_bsp.a(alt_irq_vars.o)
+ .data          0x000000000000c67c        0x0 ../MATiny_bsp/\libhal_bsp.a(alt_load.o)
+ .data          0x000000000000c67c        0x0 ../MATiny_bsp/\libhal_bsp.a(alt_main.o)
+ .data          0x000000000000c67c       0x2c ../MATiny_bsp/\libhal_bsp.a(alt_sys_init.o)
+ .data          0x000000000000c6a8        0x0 ../MATiny_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_fd.o)
+ .data          0x000000000000c6a8        0x0 ../MATiny_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_read.o)
+ .data          0x000000000000c6a8        0x0 ../MATiny_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_write.o)
+ .data          0x000000000000c6a8        0x0 ../MATiny_bsp/\libhal_bsp.a(altera_avalon_timer_sc.o)
+ .data          0x000000000000c6a8        0x0 ../MATiny_bsp/\libhal_bsp.a(alt_close.o)
+ .data          0x000000000000c6a8        0x0 ../MATiny_bsp/\libhal_bsp.a(alt_dcache_flush_all.o)
+ .data          0x000000000000c6a8      0x1a8 ../MATiny_bsp/\libhal_bsp.a(alt_dev.o)
+                0x000000000000c6a8                alt_dev_null
+                0x000000000000c6d0                alt_fd_list
+ .data          0x000000000000c850        0x0 ../MATiny_bsp/\libhal_bsp.a(alt_dev_llist_insert.o)
+ .data          0x000000000000c850        0x0 ../MATiny_bsp/\libhal_bsp.a(alt_do_ctors.o)
+ .data          0x000000000000c850        0x0 ../MATiny_bsp/\libhal_bsp.a(alt_do_dtors.o)
+ .data          0x000000000000c850        0x0 ../MATiny_bsp/\libhal_bsp.a(alt_errno.o)
+ .data          0x000000000000c850        0x0 ../MATiny_bsp/\libhal_bsp.a(alt_exception_entry.o)
+ .data          0x000000000000c850        0x0 ../MATiny_bsp/\libhal_bsp.a(alt_icache_flush_all.o)
+ .data          0x000000000000c850        0x0 ../MATiny_bsp/\libhal_bsp.a(alt_instruction_exception_entry.o)
+ .data          0x000000000000c850        0x0 ../MATiny_bsp/\libhal_bsp.a(alt_io_redirect.o)
+ .data          0x000000000000c850        0x0 ../MATiny_bsp/\libhal_bsp.a(alt_open.o)
+ .data          0x000000000000c850        0x0 ../MATiny_bsp/\libhal_bsp.a(alt_release_fd.o)
+ .data          0x000000000000c850        0x0 ../MATiny_bsp/\libhal_bsp.a(alt_tick.o)
+ .data          0x000000000000c850        0x0 ../MATiny_bsp/\libhal_bsp.a(altera_nios2_gen2_irq.o)
+ .data          0x000000000000c850        0x0 ../MATiny_bsp/\libhal_bsp.a(alt_find_dev.o)
+ .data          0x000000000000c850        0x0 ../MATiny_bsp/\libhal_bsp.a(alt_find_file.o)
+ .data          0x000000000000c850        0x0 ../MATiny_bsp/\libhal_bsp.a(alt_get_fd.o)
+ .data          0x000000000000c850        0x0 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-atexit.o)
+ .data          0x000000000000c850        0x0 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-exit.o)
+ .data          0x000000000000c850        0x0 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-int_errno.o)
+ .data          0x000000000000c850        0x0 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-memcmp.o)
+ .data          0x000000000000c850        0x0 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-strlen.o)
+ .data          0x000000000000c850        0x0 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-__atexit.o)
+ .data          0x000000000000c850        0x0 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-__call_atexit.o)
+ .data          0x000000000000c850        0x0 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-impure.o)
+ .data.impure_data
+                0x000000000000c850       0xe0 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-impure.o)
+ .data          0x000000000000c930        0x0 ../MATiny_bsp/\libhal_bsp.a(alt_exit.o)
+                0x0000000000014930                _gp = ABSOLUTE ((. + 0x8000))
+                [!provide]                        PROVIDE (gp, _gp)
+ *(.rwdata .rwdata.*)
+ *(.sdata .sdata.* .gnu.linkonce.s.*)
+ .sdata         0x000000000000c930        0x4 ../MATiny_bsp/\libhal_bsp.a(alt_irq_vars.o)
+                0x000000000000c930                alt_priority_mask
+ .sdata         0x000000000000c934       0x14 ../MATiny_bsp/\libhal_bsp.a(alt_dev.o)
+                0x000000000000c934                alt_fs_list
+                0x000000000000c93c                alt_dev_list
+                0x000000000000c944                alt_max_fd
+ .sdata         0x000000000000c948        0x4 ../MATiny_bsp/\libhal_bsp.a(alt_errno.o)
+                0x000000000000c948                alt_errno
+ .sdata         0x000000000000c94c        0x8 ../MATiny_bsp/\libhal_bsp.a(alt_tick.o)
+                0x000000000000c94c                alt_alarm_list
+ .sdata._global_impure_ptr
+                0x000000000000c954        0x4 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-impure.o)
+                0x000000000000c954                _global_impure_ptr
+ .sdata._impure_ptr
+                0x000000000000c958        0x4 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-impure.o)
+                0x000000000000c958                _impure_ptr
+ *(.sdata2 .sdata2.* .gnu.linkonce.s2.*)
+                0x000000000000c95c                . = ALIGN (0x4)
+                0x000000000000c95c                _edata = ABSOLUTE (.)
+                [!provide]                        PROVIDE (edata, ABSOLUTE (.))
+                0x000000000000c95c                PROVIDE (__ram_rwdata_end, ABSOLUTE (.))
+                0x000000000000c95c                PROVIDE (__flash_rwdata_start, LOADADDR (.rwdata))
+
+.bss            0x000000000000cc3c      0x124
+                0x000000000000cc3c                __bss_start = ABSOLUTE (.)
+                [!provide]                        PROVIDE (__sbss_start, ABSOLUTE (.))
+                [!provide]                        PROVIDE (___sbss_start, ABSOLUTE (.))
+ *(.dynsbss)
+ *(.sbss .sbss.* .gnu.linkonce.sb.*)
+ .sbss          0x000000000000cc3c        0x4 obj/default/hello_world.o
+                0x000000000000cc3c                timer_seconds
+ .sbss          0x000000000000cc40        0x4 ../MATiny_bsp/\libhal_bsp.a(alt_irq_vars.o)
+                0x000000000000cc40                alt_irq_active
+ .sbss          0x000000000000cc44        0xc ../MATiny_bsp/\libhal_bsp.a(alt_main.o)
+                0x000000000000cc44                alt_argc
+                0x000000000000cc48                alt_argv
+                0x000000000000cc4c                alt_envp
+ .sbss          0x000000000000cc50        0x4 ../MATiny_bsp/\libhal_bsp.a(alt_instruction_exception_entry.o)
+                0x000000000000cc50                alt_instruction_exception_handler
+ .sbss          0x000000000000cc54        0x8 ../MATiny_bsp/\libhal_bsp.a(alt_tick.o)
+                0x000000000000cc54                _alt_tick_rate
+                0x000000000000cc58                _alt_nticks
+ .sbss          0x000000000000cc5c        0x4 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-int_errno.o)
+                0x000000000000cc5c                errno
+ *(.sbss2 .sbss2.* .gnu.linkonce.sb2.*)
+ *(.scommon)
+                [!provide]                        PROVIDE (__sbss_end, ABSOLUTE (.))
+                [!provide]                        PROVIDE (___sbss_end, ABSOLUTE (.))
+ *(.dynbss)
+ *(.bss .bss.* .gnu.linkonce.b.*)
+ .bss           0x000000000000cc60        0x0 ../MATiny_bsp//obj/HAL/src/crt0.o
+ .bss           0x000000000000cc60        0x0 obj/default/hello_world.o
+ .bss           0x000000000000cc60        0x0 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/mno-hw-mul\libgcc.a(lib2-divmod.o)
+ .bss           0x000000000000cc60        0x0 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/mno-hw-mul\libgcc.a(lib2-mul.o)
+ .bss           0x000000000000cc60        0x0 ../MATiny_bsp/\libhal_bsp.a(alt_iic.o)
+ .bss           0x000000000000cc60        0x0 ../MATiny_bsp/\libhal_bsp.a(alt_iic_isr_register.o)
+ .bss           0x000000000000cc60        0x0 ../MATiny_bsp/\libhal_bsp.a(alt_irq_entry.o)
+ .bss           0x000000000000cc60        0x0 ../MATiny_bsp/\libhal_bsp.a(alt_irq_handler.o)
+ .bss           0x000000000000cc60        0x0 ../MATiny_bsp/\libhal_bsp.a(alt_irq_vars.o)
+ .bss           0x000000000000cc60        0x0 ../MATiny_bsp/\libhal_bsp.a(alt_load.o)
+ .bss           0x000000000000cc60        0x0 ../MATiny_bsp/\libhal_bsp.a(alt_main.o)
+ .bss           0x000000000000cc60        0x0 ../MATiny_bsp/\libhal_bsp.a(alt_sys_init.o)
+ .bss           0x000000000000cc60        0x0 ../MATiny_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_fd.o)
+ .bss           0x000000000000cc60        0x0 ../MATiny_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_read.o)
+ .bss           0x000000000000cc60        0x0 ../MATiny_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_write.o)
+ .bss           0x000000000000cc60        0x0 ../MATiny_bsp/\libhal_bsp.a(altera_avalon_timer_sc.o)
+ .bss           0x000000000000cc60        0x0 ../MATiny_bsp/\libhal_bsp.a(alt_close.o)
+ .bss           0x000000000000cc60        0x0 ../MATiny_bsp/\libhal_bsp.a(alt_dcache_flush_all.o)
+ .bss           0x000000000000cc60        0x0 ../MATiny_bsp/\libhal_bsp.a(alt_dev.o)
+ .bss           0x000000000000cc60        0x0 ../MATiny_bsp/\libhal_bsp.a(alt_dev_llist_insert.o)
+ .bss           0x000000000000cc60        0x0 ../MATiny_bsp/\libhal_bsp.a(alt_do_ctors.o)
+ .bss           0x000000000000cc60        0x0 ../MATiny_bsp/\libhal_bsp.a(alt_do_dtors.o)
+ .bss           0x000000000000cc60        0x0 ../MATiny_bsp/\libhal_bsp.a(alt_errno.o)
+ .bss           0x000000000000cc60        0x0 ../MATiny_bsp/\libhal_bsp.a(alt_exception_entry.o)
+ .bss           0x000000000000cc60        0x0 ../MATiny_bsp/\libhal_bsp.a(alt_icache_flush_all.o)
+ .bss           0x000000000000cc60        0x0 ../MATiny_bsp/\libhal_bsp.a(alt_instruction_exception_entry.o)
+ .bss           0x000000000000cc60        0x0 ../MATiny_bsp/\libhal_bsp.a(alt_io_redirect.o)
+ .bss           0x000000000000cc60        0x0 ../MATiny_bsp/\libhal_bsp.a(alt_open.o)
+ .bss           0x000000000000cc60        0x0 ../MATiny_bsp/\libhal_bsp.a(alt_release_fd.o)
+ .bss           0x000000000000cc60        0x0 ../MATiny_bsp/\libhal_bsp.a(alt_tick.o)
+ .bss           0x000000000000cc60        0x0 ../MATiny_bsp/\libhal_bsp.a(altera_nios2_gen2_irq.o)
+ .bss           0x000000000000cc60        0x0 ../MATiny_bsp/\libhal_bsp.a(alt_find_dev.o)
+ .bss           0x000000000000cc60        0x0 ../MATiny_bsp/\libhal_bsp.a(alt_find_file.o)
+ .bss           0x000000000000cc60        0x0 ../MATiny_bsp/\libhal_bsp.a(alt_get_fd.o)
+ .bss           0x000000000000cc60        0x0 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-atexit.o)
+ .bss           0x000000000000cc60        0x0 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-exit.o)
+ .bss           0x000000000000cc60        0x0 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-int_errno.o)
+ .bss           0x000000000000cc60        0x0 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-memcmp.o)
+ .bss           0x000000000000cc60        0x0 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-strlen.o)
+ .bss           0x000000000000cc60        0x0 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-__atexit.o)
+ .bss           0x000000000000cc60        0x0 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-__call_atexit.o)
+ .bss           0x000000000000cc60        0x0 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-impure.o)
+ .bss           0x000000000000cc60        0x0 ../MATiny_bsp/\libhal_bsp.a(alt_exit.o)
+ *(COMMON)
+ COMMON         0x000000000000cc60      0x100 ../MATiny_bsp/\libhal_bsp.a(alt_irq_handler.o)
+                0x000000000000cc60                alt_irq
+                0x000000000000cd60                . = ALIGN (0x4)
+                0x000000000000cd60                __bss_end = ABSOLUTE (.)
+
+.onchip_memory2_0
+                0x000000000000cd60        0x0
+                [!provide]                        PROVIDE (_alt_partition_onchip_memory2_0_start, ABSOLUTE (.))
+ *(.onchip_memory2_0 .onchip_memory2_0. onchip_memory2_0.*)
+                0x000000000000cd60                . = ALIGN (0x4)
+                [!provide]                        PROVIDE (_alt_partition_onchip_memory2_0_end, ABSOLUTE (.))
+                0x000000000000cd60                _end = ABSOLUTE (.)
+                0x000000000000cd60                end = ABSOLUTE (.)
+                0x000000000000cd60                __alt_stack_base = ABSOLUTE (.)
+                [!provide]                        PROVIDE (_alt_partition_onchip_memory2_0_load_addr, LOADADDR (.onchip_memory2_0))
+
+.stab
+ *(.stab)
+
+.stabstr
+ *(.stabstr)
+
+.stab.excl
+ *(.stab.excl)
+
+.stab.exclstr
+ *(.stab.exclstr)
+
+.stab.index
+ *(.stab.index)
+
+.stab.indexstr
+ *(.stab.indexstr)
+
+.comment        0x0000000000000000       0x23
+ *(.comment)
+ .comment       0x0000000000000000       0x23 obj/default/hello_world.o
+                                         0x24 (size before relaxing)
+ .comment       0x0000000000000023       0x24 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/mno-hw-mul\libgcc.a(lib2-divmod.o)
+ .comment       0x0000000000000023       0x24 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/mno-hw-mul\libgcc.a(lib2-mul.o)
+ .comment       0x0000000000000023       0x24 ../MATiny_bsp/\libhal_bsp.a(alt_iic.o)
+ .comment       0x0000000000000023       0x24 ../MATiny_bsp/\libhal_bsp.a(alt_iic_isr_register.o)
+ .comment       0x0000000000000023       0x24 ../MATiny_bsp/\libhal_bsp.a(alt_irq_handler.o)
+ .comment       0x0000000000000023       0x24 ../MATiny_bsp/\libhal_bsp.a(alt_irq_vars.o)
+ .comment       0x0000000000000023       0x24 ../MATiny_bsp/\libhal_bsp.a(alt_load.o)
+ .comment       0x0000000000000023       0x24 ../MATiny_bsp/\libhal_bsp.a(alt_main.o)
+ .comment       0x0000000000000023       0x24 ../MATiny_bsp/\libhal_bsp.a(alt_sys_init.o)
+ .comment       0x0000000000000023       0x24 ../MATiny_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_fd.o)
+ .comment       0x0000000000000023       0x24 ../MATiny_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_read.o)
+ .comment       0x0000000000000023       0x24 ../MATiny_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_write.o)
+ .comment       0x0000000000000023       0x24 ../MATiny_bsp/\libhal_bsp.a(altera_avalon_timer_sc.o)
+ .comment       0x0000000000000023       0x24 ../MATiny_bsp/\libhal_bsp.a(alt_close.o)
+ .comment       0x0000000000000023       0x24 ../MATiny_bsp/\libhal_bsp.a(alt_dcache_flush_all.o)
+ .comment       0x0000000000000023       0x24 ../MATiny_bsp/\libhal_bsp.a(alt_dev.o)
+ .comment       0x0000000000000023       0x24 ../MATiny_bsp/\libhal_bsp.a(alt_dev_llist_insert.o)
+ .comment       0x0000000000000023       0x24 ../MATiny_bsp/\libhal_bsp.a(alt_do_ctors.o)
+ .comment       0x0000000000000023       0x24 ../MATiny_bsp/\libhal_bsp.a(alt_do_dtors.o)
+ .comment       0x0000000000000023       0x24 ../MATiny_bsp/\libhal_bsp.a(alt_errno.o)
+ .comment       0x0000000000000023       0x24 ../MATiny_bsp/\libhal_bsp.a(alt_icache_flush_all.o)
+ .comment       0x0000000000000023       0x24 ../MATiny_bsp/\libhal_bsp.a(alt_instruction_exception_entry.o)
+ .comment       0x0000000000000023       0x24 ../MATiny_bsp/\libhal_bsp.a(alt_io_redirect.o)
+ .comment       0x0000000000000023       0x24 ../MATiny_bsp/\libhal_bsp.a(alt_open.o)
+ .comment       0x0000000000000023       0x24 ../MATiny_bsp/\libhal_bsp.a(alt_release_fd.o)
+ .comment       0x0000000000000023       0x24 ../MATiny_bsp/\libhal_bsp.a(alt_tick.o)
+ .comment       0x0000000000000023       0x24 ../MATiny_bsp/\libhal_bsp.a(altera_nios2_gen2_irq.o)
+ .comment       0x0000000000000023       0x24 ../MATiny_bsp/\libhal_bsp.a(alt_find_dev.o)
+ .comment       0x0000000000000023       0x24 ../MATiny_bsp/\libhal_bsp.a(alt_find_file.o)
+ .comment       0x0000000000000023       0x24 ../MATiny_bsp/\libhal_bsp.a(alt_get_fd.o)
+ .comment       0x0000000000000023       0x24 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-atexit.o)
+ .comment       0x0000000000000023       0x24 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-exit.o)
+ .comment       0x0000000000000023       0x24 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-int_errno.o)
+ .comment       0x0000000000000023       0x24 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-memcmp.o)
+ .comment       0x0000000000000023       0x24 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-strlen.o)
+ .comment       0x0000000000000023       0x24 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-__atexit.o)
+ .comment       0x0000000000000023       0x24 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-__call_atexit.o)
+ .comment       0x0000000000000023       0x24 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-impure.o)
+ .comment       0x0000000000000023       0x24 ../MATiny_bsp/\libhal_bsp.a(alt_exit.o)
+
+.debug
+ *(.debug)
+
+.line
+ *(.line)
+
+.debug_srcinfo
+ *(.debug_srcinfo)
+
+.debug_sfnames
+ *(.debug_sfnames)
+
+.debug_aranges  0x0000000000000000      0x578
+ *(.debug_aranges)
+ .debug_aranges
+                0x0000000000000000       0x28 ../MATiny_bsp//obj/HAL/src/crt0.o
+ .debug_aranges
+                0x0000000000000028       0x20 obj/default/hello_world.o
+ .debug_aranges
+                0x0000000000000048       0x20 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/mno-hw-mul\libgcc.a(lib2-divmod.o)
+ .debug_aranges
+                0x0000000000000068       0x20 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/mno-hw-mul\libgcc.a(lib2-mul.o)
+ .debug_aranges
+                0x0000000000000088       0x20 ../MATiny_bsp/\libhal_bsp.a(alt_iic.o)
+ .debug_aranges
+                0x00000000000000a8       0x20 ../MATiny_bsp/\libhal_bsp.a(alt_iic_isr_register.o)
+ .debug_aranges
+                0x00000000000000c8       0x30 ../MATiny_bsp/\libhal_bsp.a(alt_irq_entry.o)
+ .debug_aranges
+                0x00000000000000f8       0x20 ../MATiny_bsp/\libhal_bsp.a(alt_irq_handler.o)
+ .debug_aranges
+                0x0000000000000118       0x18 ../MATiny_bsp/\libhal_bsp.a(alt_irq_vars.o)
+ .debug_aranges
+                0x0000000000000130       0x20 ../MATiny_bsp/\libhal_bsp.a(alt_load.o)
+ .debug_aranges
+                0x0000000000000150       0x20 ../MATiny_bsp/\libhal_bsp.a(alt_main.o)
+ .debug_aranges
+                0x0000000000000170       0x20 ../MATiny_bsp/\libhal_bsp.a(alt_sys_init.o)
+ .debug_aranges
+                0x0000000000000190       0x20 ../MATiny_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_fd.o)
+ .debug_aranges
+                0x00000000000001b0       0x20 ../MATiny_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_read.o)
+ .debug_aranges
+                0x00000000000001d0       0x20 ../MATiny_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_write.o)
+ .debug_aranges
+                0x00000000000001f0       0x20 ../MATiny_bsp/\libhal_bsp.a(altera_avalon_timer_sc.o)
+ .debug_aranges
+                0x0000000000000210       0x20 ../MATiny_bsp/\libhal_bsp.a(alt_close.o)
+ .debug_aranges
+                0x0000000000000230       0x20 ../MATiny_bsp/\libhal_bsp.a(alt_dcache_flush_all.o)
+ .debug_aranges
+                0x0000000000000250       0x20 ../MATiny_bsp/\libhal_bsp.a(alt_dev.o)
+ .debug_aranges
+                0x0000000000000270       0x20 ../MATiny_bsp/\libhal_bsp.a(alt_dev_llist_insert.o)
+ .debug_aranges
+                0x0000000000000290       0x20 ../MATiny_bsp/\libhal_bsp.a(alt_do_ctors.o)
+ .debug_aranges
+                0x00000000000002b0       0x20 ../MATiny_bsp/\libhal_bsp.a(alt_do_dtors.o)
+ .debug_aranges
+                0x00000000000002d0       0x18 ../MATiny_bsp/\libhal_bsp.a(alt_errno.o)
+ .debug_aranges
+                0x00000000000002e8       0x38 ../MATiny_bsp/\libhal_bsp.a(alt_exception_entry.o)
+ .debug_aranges
+                0x0000000000000320       0x20 ../MATiny_bsp/\libhal_bsp.a(alt_icache_flush_all.o)
+ .debug_aranges
+                0x0000000000000340       0x28 ../MATiny_bsp/\libhal_bsp.a(alt_instruction_exception_entry.o)
+ .debug_aranges
+                0x0000000000000368       0x20 ../MATiny_bsp/\libhal_bsp.a(alt_io_redirect.o)
+ .debug_aranges
+                0x0000000000000388       0x20 ../MATiny_bsp/\libhal_bsp.a(alt_open.o)
+ .debug_aranges
+                0x00000000000003a8       0x20 ../MATiny_bsp/\libhal_bsp.a(alt_release_fd.o)
+ .debug_aranges
+                0x00000000000003c8       0x20 ../MATiny_bsp/\libhal_bsp.a(alt_tick.o)
+ .debug_aranges
+                0x00000000000003e8       0x20 ../MATiny_bsp/\libhal_bsp.a(altera_nios2_gen2_irq.o)
+ .debug_aranges
+                0x0000000000000408       0x20 ../MATiny_bsp/\libhal_bsp.a(alt_find_dev.o)
+ .debug_aranges
+                0x0000000000000428       0x20 ../MATiny_bsp/\libhal_bsp.a(alt_find_file.o)
+ .debug_aranges
+                0x0000000000000448       0x20 ../MATiny_bsp/\libhal_bsp.a(alt_get_fd.o)
+ .debug_aranges
+                0x0000000000000468       0x20 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-atexit.o)
+ .debug_aranges
+                0x0000000000000488       0x20 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-exit.o)
+ .debug_aranges
+                0x00000000000004a8       0x18 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-int_errno.o)
+ .debug_aranges
+                0x00000000000004c0       0x20 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-memcmp.o)
+ .debug_aranges
+                0x00000000000004e0       0x20 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-strlen.o)
+ .debug_aranges
+                0x0000000000000500       0x20 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-__atexit.o)
+ .debug_aranges
+                0x0000000000000520       0x20 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-__call_atexit.o)
+ .debug_aranges
+                0x0000000000000540       0x18 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-impure.o)
+ .debug_aranges
+                0x0000000000000558       0x20 ../MATiny_bsp/\libhal_bsp.a(alt_exit.o)
+
+.debug_pubnames
+ *(.debug_pubnames)
+
+.debug_info     0x0000000000000000     0x5cc1
+ *(.debug_info .gnu.linkonce.wi.*)
+ .debug_info    0x0000000000000000       0x77 ../MATiny_bsp//obj/HAL/src/crt0.o
+ .debug_info    0x0000000000000077      0x458 obj/default/hello_world.o
+ .debug_info    0x00000000000004cf      0x2c6 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/mno-hw-mul\libgcc.a(lib2-divmod.o)
+ .debug_info    0x0000000000000795       0xb4 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/mno-hw-mul\libgcc.a(lib2-mul.o)
+ .debug_info    0x0000000000000849      0x350 ../MATiny_bsp/\libhal_bsp.a(alt_iic.o)
+ .debug_info    0x0000000000000b99      0x1ef ../MATiny_bsp/\libhal_bsp.a(alt_iic_isr_register.o)
+ .debug_info    0x0000000000000d88       0x80 ../MATiny_bsp/\libhal_bsp.a(alt_irq_entry.o)
+ .debug_info    0x0000000000000e08      0x187 ../MATiny_bsp/\libhal_bsp.a(alt_irq_handler.o)
+ .debug_info    0x0000000000000f8f       0x88 ../MATiny_bsp/\libhal_bsp.a(alt_irq_vars.o)
+ .debug_info    0x0000000000001017      0x145 ../MATiny_bsp/\libhal_bsp.a(alt_load.o)
+ .debug_info    0x000000000000115c      0x131 ../MATiny_bsp/\libhal_bsp.a(alt_main.o)
+ .debug_info    0x000000000000128d      0x3df ../MATiny_bsp/\libhal_bsp.a(alt_sys_init.o)
+ .debug_info    0x000000000000166c      0x3a7 ../MATiny_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_fd.o)
+ .debug_info    0x0000000000001a13      0x1b2 ../MATiny_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_read.o)
+ .debug_info    0x0000000000001bc5      0x195 ../MATiny_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_write.o)
+ .debug_info    0x0000000000001d5a      0x226 ../MATiny_bsp/\libhal_bsp.a(altera_avalon_timer_sc.o)
+ .debug_info    0x0000000000001f80      0x321 ../MATiny_bsp/\libhal_bsp.a(alt_close.o)
+ .debug_info    0x00000000000022a1       0x92 ../MATiny_bsp/\libhal_bsp.a(alt_dcache_flush_all.o)
+ .debug_info    0x0000000000002333      0x49c ../MATiny_bsp/\libhal_bsp.a(alt_dev.o)
+ .debug_info    0x00000000000027cf      0x1a9 ../MATiny_bsp/\libhal_bsp.a(alt_dev_llist_insert.o)
+ .debug_info    0x0000000000002978       0x83 ../MATiny_bsp/\libhal_bsp.a(alt_do_ctors.o)
+ .debug_info    0x00000000000029fb       0x83 ../MATiny_bsp/\libhal_bsp.a(alt_do_dtors.o)
+ .debug_info    0x0000000000002a7e       0xa6 ../MATiny_bsp/\libhal_bsp.a(alt_errno.o)
+ .debug_info    0x0000000000002b24       0x86 ../MATiny_bsp/\libhal_bsp.a(alt_exception_entry.o)
+ .debug_info    0x0000000000002baa       0x92 ../MATiny_bsp/\libhal_bsp.a(alt_icache_flush_all.o)
+ .debug_info    0x0000000000002c3c      0x1e7 ../MATiny_bsp/\libhal_bsp.a(alt_instruction_exception_entry.o)
+ .debug_info    0x0000000000002e23      0x4a5 ../MATiny_bsp/\libhal_bsp.a(alt_io_redirect.o)
+ .debug_info    0x00000000000032c8      0x3bb ../MATiny_bsp/\libhal_bsp.a(alt_open.o)
+ .debug_info    0x0000000000003683      0x2b0 ../MATiny_bsp/\libhal_bsp.a(alt_release_fd.o)
+ .debug_info    0x0000000000003933      0x299 ../MATiny_bsp/\libhal_bsp.a(alt_tick.o)
+ .debug_info    0x0000000000003bcc       0x92 ../MATiny_bsp/\libhal_bsp.a(altera_nios2_gen2_irq.o)
+ .debug_info    0x0000000000003c5e      0x2e9 ../MATiny_bsp/\libhal_bsp.a(alt_find_dev.o)
+ .debug_info    0x0000000000003f47      0x2e6 ../MATiny_bsp/\libhal_bsp.a(alt_find_file.o)
+ .debug_info    0x000000000000422d      0x310 ../MATiny_bsp/\libhal_bsp.a(alt_get_fd.o)
+ .debug_info    0x000000000000453d       0xfe c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-atexit.o)
+ .debug_info    0x000000000000463b       0xe5 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-exit.o)
+ .debug_info    0x0000000000004720       0x8a c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-int_errno.o)
+ .debug_info    0x00000000000047aa       0xf4 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-memcmp.o)
+ .debug_info    0x000000000000489e       0xc9 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-strlen.o)
+ .debug_info    0x0000000000004967      0x64a c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-__atexit.o)
+ .debug_info    0x0000000000004fb1      0x67b c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-__call_atexit.o)
+ .debug_info    0x000000000000562c      0x5a9 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-impure.o)
+ .debug_info    0x0000000000005bd5       0xec ../MATiny_bsp/\libhal_bsp.a(alt_exit.o)
+
+.debug_abbrev   0x0000000000000000     0x2378
+ *(.debug_abbrev)
+ .debug_abbrev  0x0000000000000000       0x12 ../MATiny_bsp//obj/HAL/src/crt0.o
+ .debug_abbrev  0x0000000000000012      0x13d obj/default/hello_world.o
+ .debug_abbrev  0x000000000000014f      0x10e c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/mno-hw-mul\libgcc.a(lib2-divmod.o)
+ .debug_abbrev  0x000000000000025d       0x6f c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/mno-hw-mul\libgcc.a(lib2-mul.o)
+ .debug_abbrev  0x00000000000002cc      0x163 ../MATiny_bsp/\libhal_bsp.a(alt_iic.o)
+ .debug_abbrev  0x000000000000042f      0x169 ../MATiny_bsp/\libhal_bsp.a(alt_iic_isr_register.o)
+ .debug_abbrev  0x0000000000000598       0x12 ../MATiny_bsp/\libhal_bsp.a(alt_irq_entry.o)
+ .debug_abbrev  0x00000000000005aa      0x122 ../MATiny_bsp/\libhal_bsp.a(alt_irq_handler.o)
+ .debug_abbrev  0x00000000000006cc       0x40 ../MATiny_bsp/\libhal_bsp.a(alt_irq_vars.o)
+ .debug_abbrev  0x000000000000070c       0x9f ../MATiny_bsp/\libhal_bsp.a(alt_load.o)
+ .debug_abbrev  0x00000000000007ab       0xba ../MATiny_bsp/\libhal_bsp.a(alt_main.o)
+ .debug_abbrev  0x0000000000000865      0x157 ../MATiny_bsp/\libhal_bsp.a(alt_sys_init.o)
+ .debug_abbrev  0x00000000000009bc       0xf7 ../MATiny_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_fd.o)
+ .debug_abbrev  0x0000000000000ab3       0xd5 ../MATiny_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_read.o)
+ .debug_abbrev  0x0000000000000b88       0xd5 ../MATiny_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_write.o)
+ .debug_abbrev  0x0000000000000c5d      0x155 ../MATiny_bsp/\libhal_bsp.a(altera_avalon_timer_sc.o)
+ .debug_abbrev  0x0000000000000db2      0x11f ../MATiny_bsp/\libhal_bsp.a(alt_close.o)
+ .debug_abbrev  0x0000000000000ed1       0x42 ../MATiny_bsp/\libhal_bsp.a(alt_dcache_flush_all.o)
+ .debug_abbrev  0x0000000000000f13       0xd9 ../MATiny_bsp/\libhal_bsp.a(alt_dev.o)
+ .debug_abbrev  0x0000000000000fec      0x114 ../MATiny_bsp/\libhal_bsp.a(alt_dev_llist_insert.o)
+ .debug_abbrev  0x0000000000001100       0x79 ../MATiny_bsp/\libhal_bsp.a(alt_do_ctors.o)
+ .debug_abbrev  0x0000000000001179       0x79 ../MATiny_bsp/\libhal_bsp.a(alt_do_dtors.o)
+ .debug_abbrev  0x00000000000011f2       0x5a ../MATiny_bsp/\libhal_bsp.a(alt_errno.o)
+ .debug_abbrev  0x000000000000124c       0x12 ../MATiny_bsp/\libhal_bsp.a(alt_exception_entry.o)
+ .debug_abbrev  0x000000000000125e       0x42 ../MATiny_bsp/\libhal_bsp.a(alt_icache_flush_all.o)
+ .debug_abbrev  0x00000000000012a0       0xdc ../MATiny_bsp/\libhal_bsp.a(alt_instruction_exception_entry.o)
+ .debug_abbrev  0x000000000000137c      0x114 ../MATiny_bsp/\libhal_bsp.a(alt_io_redirect.o)
+ .debug_abbrev  0x0000000000001490      0x148 ../MATiny_bsp/\libhal_bsp.a(alt_open.o)
+ .debug_abbrev  0x00000000000015d8       0xde ../MATiny_bsp/\libhal_bsp.a(alt_release_fd.o)
+ .debug_abbrev  0x00000000000016b6      0x15a ../MATiny_bsp/\libhal_bsp.a(alt_tick.o)
+ .debug_abbrev  0x0000000000001810       0x42 ../MATiny_bsp/\libhal_bsp.a(altera_nios2_gen2_irq.o)
+ .debug_abbrev  0x0000000000001852       0xf0 ../MATiny_bsp/\libhal_bsp.a(alt_find_dev.o)
+ .debug_abbrev  0x0000000000001942       0xf0 ../MATiny_bsp/\libhal_bsp.a(alt_find_file.o)
+ .debug_abbrev  0x0000000000001a32      0x10d ../MATiny_bsp/\libhal_bsp.a(alt_get_fd.o)
+ .debug_abbrev  0x0000000000001b3f       0xaa c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-atexit.o)
+ .debug_abbrev  0x0000000000001be9       0x8b c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-exit.o)
+ .debug_abbrev  0x0000000000001c74       0x37 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-int_errno.o)
+ .debug_abbrev  0x0000000000001cab       0x7f c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-memcmp.o)
+ .debug_abbrev  0x0000000000001d2a       0x7f c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-strlen.o)
+ .debug_abbrev  0x0000000000001da9      0x1e6 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-__atexit.o)
+ .debug_abbrev  0x0000000000001f8f      0x1f6 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-__call_atexit.o)
+ .debug_abbrev  0x0000000000002185      0x14a c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-impure.o)
+ .debug_abbrev  0x00000000000022cf       0xa9 ../MATiny_bsp/\libhal_bsp.a(alt_exit.o)
+
+.debug_line     0x0000000000000000     0x2648
+ *(.debug_line)
+ .debug_line    0x0000000000000000       0x66 ../MATiny_bsp//obj/HAL/src/crt0.o
+ .debug_line    0x0000000000000066      0x266 obj/default/hello_world.o
+ .debug_line    0x00000000000002cc      0x105 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/mno-hw-mul\libgcc.a(lib2-divmod.o)
+ .debug_line    0x00000000000003d1       0x80 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/mno-hw-mul\libgcc.a(lib2-mul.o)
+ .debug_line    0x0000000000000451       0xeb ../MATiny_bsp/\libhal_bsp.a(alt_iic.o)
+ .debug_line    0x000000000000053c       0xdb ../MATiny_bsp/\libhal_bsp.a(alt_iic_isr_register.o)
+ .debug_line    0x0000000000000617       0x6b ../MATiny_bsp/\libhal_bsp.a(alt_irq_entry.o)
+ .debug_line    0x0000000000000682       0xaa ../MATiny_bsp/\libhal_bsp.a(alt_irq_handler.o)
+ .debug_line    0x000000000000072c       0x50 ../MATiny_bsp/\libhal_bsp.a(alt_irq_vars.o)
+ .debug_line    0x000000000000077c       0x8e ../MATiny_bsp/\libhal_bsp.a(alt_load.o)
+ .debug_line    0x000000000000080a       0xa4 ../MATiny_bsp/\libhal_bsp.a(alt_main.o)
+ .debug_line    0x00000000000008ae      0x141 ../MATiny_bsp/\libhal_bsp.a(alt_sys_init.o)
+ .debug_line    0x00000000000009ef      0x112 ../MATiny_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_fd.o)
+ .debug_line    0x0000000000000b01       0xfd ../MATiny_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_read.o)
+ .debug_line    0x0000000000000bfe       0xf4 ../MATiny_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_write.o)
+ .debug_line    0x0000000000000cf2       0xfd ../MATiny_bsp/\libhal_bsp.a(altera_avalon_timer_sc.o)
+ .debug_line    0x0000000000000def      0x165 ../MATiny_bsp/\libhal_bsp.a(alt_close.o)
+ .debug_line    0x0000000000000f54       0x51 ../MATiny_bsp/\libhal_bsp.a(alt_dcache_flush_all.o)
+ .debug_line    0x0000000000000fa5       0xf8 ../MATiny_bsp/\libhal_bsp.a(alt_dev.o)
+ .debug_line    0x000000000000109d       0xcf ../MATiny_bsp/\libhal_bsp.a(alt_dev_llist_insert.o)
+ .debug_line    0x000000000000116c       0x59 ../MATiny_bsp/\libhal_bsp.a(alt_do_ctors.o)
+ .debug_line    0x00000000000011c5       0x59 ../MATiny_bsp/\libhal_bsp.a(alt_do_dtors.o)
+ .debug_line    0x000000000000121e       0x51 ../MATiny_bsp/\libhal_bsp.a(alt_errno.o)
+ .debug_line    0x000000000000126f       0xb3 ../MATiny_bsp/\libhal_bsp.a(alt_exception_entry.o)
+ .debug_line    0x0000000000001322       0x4f ../MATiny_bsp/\libhal_bsp.a(alt_icache_flush_all.o)
+ .debug_line    0x0000000000001371       0xb9 ../MATiny_bsp/\libhal_bsp.a(alt_instruction_exception_entry.o)
+ .debug_line    0x000000000000142a      0x135 ../MATiny_bsp/\libhal_bsp.a(alt_io_redirect.o)
+ .debug_line    0x000000000000155f      0x12b ../MATiny_bsp/\libhal_bsp.a(alt_open.o)
+ .debug_line    0x000000000000168a       0xb0 ../MATiny_bsp/\libhal_bsp.a(alt_release_fd.o)
+ .debug_line    0x000000000000173a       0xff ../MATiny_bsp/\libhal_bsp.a(alt_tick.o)
+ .debug_line    0x0000000000001839       0x51 ../MATiny_bsp/\libhal_bsp.a(altera_nios2_gen2_irq.o)
+ .debug_line    0x000000000000188a       0xb5 ../MATiny_bsp/\libhal_bsp.a(alt_find_dev.o)
+ .debug_line    0x000000000000193f       0xd1 ../MATiny_bsp/\libhal_bsp.a(alt_find_file.o)
+ .debug_line    0x0000000000001a10       0xd7 ../MATiny_bsp/\libhal_bsp.a(alt_get_fd.o)
+ .debug_line    0x0000000000001ae7       0xe7 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-atexit.o)
+ .debug_line    0x0000000000001bce      0x159 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-exit.o)
+ .debug_line    0x0000000000001d27       0x5f c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-int_errno.o)
+ .debug_line    0x0000000000001d86      0x160 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-memcmp.o)
+ .debug_line    0x0000000000001ee6      0x15c c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-strlen.o)
+ .debug_line    0x0000000000002042      0x20d c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-__atexit.o)
+ .debug_line    0x000000000000224f      0x232 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-__call_atexit.o)
+ .debug_line    0x0000000000002481      0x156 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-impure.o)
+ .debug_line    0x00000000000025d7       0x71 ../MATiny_bsp/\libhal_bsp.a(alt_exit.o)
+
+.debug_frame    0x0000000000000000      0xbd4
+ *(.debug_frame)
+ .debug_frame   0x0000000000000000      0x238 obj/default/hello_world.o
+ .debug_frame   0x0000000000000238       0x50 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/mno-hw-mul\libgcc.a(lib2-divmod.o)
+ .debug_frame   0x0000000000000288       0x20 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/mno-hw-mul\libgcc.a(lib2-mul.o)
+ .debug_frame   0x00000000000002a8       0xa4 ../MATiny_bsp/\libhal_bsp.a(alt_iic.o)
+ .debug_frame   0x000000000000034c       0x38 ../MATiny_bsp/\libhal_bsp.a(alt_iic_isr_register.o)
+ .debug_frame   0x0000000000000384       0x38 ../MATiny_bsp/\libhal_bsp.a(alt_irq_handler.o)
+ .debug_frame   0x00000000000003bc       0x5c ../MATiny_bsp/\libhal_bsp.a(alt_load.o)
+ .debug_frame   0x0000000000000418       0x2c ../MATiny_bsp/\libhal_bsp.a(alt_main.o)
+ .debug_frame   0x0000000000000444       0x88 ../MATiny_bsp/\libhal_bsp.a(alt_sys_init.o)
+ .debug_frame   0x00000000000004cc       0x60 ../MATiny_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_fd.o)
+ .debug_frame   0x000000000000052c       0x34 ../MATiny_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_read.o)
+ .debug_frame   0x0000000000000560       0x34 ../MATiny_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_write.o)
+ .debug_frame   0x0000000000000594       0x60 ../MATiny_bsp/\libhal_bsp.a(altera_avalon_timer_sc.o)
+ .debug_frame   0x00000000000005f4       0x60 ../MATiny_bsp/\libhal_bsp.a(alt_close.o)
+ .debug_frame   0x0000000000000654       0x34 ../MATiny_bsp/\libhal_bsp.a(alt_dcache_flush_all.o)
+ .debug_frame   0x0000000000000688       0x34 ../MATiny_bsp/\libhal_bsp.a(alt_dev.o)
+ .debug_frame   0x00000000000006bc       0x60 ../MATiny_bsp/\libhal_bsp.a(alt_dev_llist_insert.o)
+ .debug_frame   0x000000000000071c       0x38 ../MATiny_bsp/\libhal_bsp.a(alt_do_ctors.o)
+ .debug_frame   0x0000000000000754       0x38 ../MATiny_bsp/\libhal_bsp.a(alt_do_dtors.o)
+ .debug_frame   0x000000000000078c       0x34 ../MATiny_bsp/\libhal_bsp.a(alt_icache_flush_all.o)
+ .debug_frame   0x00000000000007c0       0x5c ../MATiny_bsp/\libhal_bsp.a(alt_instruction_exception_entry.o)
+ .debug_frame   0x000000000000081c       0x64 ../MATiny_bsp/\libhal_bsp.a(alt_io_redirect.o)
+ .debug_frame   0x0000000000000880       0x8c ../MATiny_bsp/\libhal_bsp.a(alt_open.o)
+ .debug_frame   0x000000000000090c       0x3c ../MATiny_bsp/\libhal_bsp.a(alt_release_fd.o)
+ .debug_frame   0x0000000000000948       0x5c ../MATiny_bsp/\libhal_bsp.a(alt_tick.o)
+ .debug_frame   0x00000000000009a4       0x34 ../MATiny_bsp/\libhal_bsp.a(altera_nios2_gen2_irq.o)
+ .debug_frame   0x00000000000009d8       0x38 ../MATiny_bsp/\libhal_bsp.a(alt_find_dev.o)
+ .debug_frame   0x0000000000000a10       0x38 ../MATiny_bsp/\libhal_bsp.a(alt_find_file.o)
+ .debug_frame   0x0000000000000a48       0x3c ../MATiny_bsp/\libhal_bsp.a(alt_get_fd.o)
+ .debug_frame   0x0000000000000a84       0x20 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-atexit.o)
+ .debug_frame   0x0000000000000aa4       0x28 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-exit.o)
+ .debug_frame   0x0000000000000acc       0x20 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-memcmp.o)
+ .debug_frame   0x0000000000000aec       0x20 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-strlen.o)
+ .debug_frame   0x0000000000000b0c       0x48 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-__atexit.o)
+ .debug_frame   0x0000000000000b54       0x54 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-__call_atexit.o)
+ .debug_frame   0x0000000000000ba8       0x2c ../MATiny_bsp/\libhal_bsp.a(alt_exit.o)
+
+.debug_str      0x0000000000000000     0x1ae3
+ *(.debug_str)
+ .debug_str     0x0000000000000000      0x254 obj/default/hello_world.o
+                                        0x2b0 (size before relaxing)
+ .debug_str     0x0000000000000254      0x187 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/mno-hw-mul\libgcc.a(lib2-divmod.o)
+                                        0x1d2 (size before relaxing)
+ .debug_str     0x00000000000003db       0x40 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/mno-hw-mul\libgcc.a(lib2-mul.o)
+                                        0x193 (size before relaxing)
+ .debug_str     0x000000000000041b      0x132 ../MATiny_bsp/\libhal_bsp.a(alt_iic.o)
+                                        0x247 (size before relaxing)
+ .debug_str     0x000000000000054d       0x4c ../MATiny_bsp/\libhal_bsp.a(alt_iic_isr_register.o)
+                                        0x1f1 (size before relaxing)
+ .debug_str     0x0000000000000599       0x3a ../MATiny_bsp/\libhal_bsp.a(alt_irq_handler.o)
+                                        0x1a0 (size before relaxing)
+ .debug_str     0x00000000000005d3       0x17 ../MATiny_bsp/\libhal_bsp.a(alt_irq_vars.o)
+                                        0x143 (size before relaxing)
+ .debug_str     0x00000000000005ea       0xe9 ../MATiny_bsp/\libhal_bsp.a(alt_load.o)
+                                        0x21b (size before relaxing)
+ .debug_str     0x00000000000006d3       0x70 ../MATiny_bsp/\libhal_bsp.a(alt_main.o)
+                                        0x1a6 (size before relaxing)
+ .debug_str     0x0000000000000743      0x18a ../MATiny_bsp/\libhal_bsp.a(alt_sys_init.o)
+                                        0x315 (size before relaxing)
+ .debug_str     0x00000000000008cd       0x77 ../MATiny_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_fd.o)
+                                        0x2de (size before relaxing)
+ .debug_str     0x0000000000000944       0x48 ../MATiny_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_read.o)
+                                        0x228 (size before relaxing)
+ .debug_str     0x000000000000098c       0x4a ../MATiny_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_write.o)
+                                        0x21e (size before relaxing)
+ .debug_str     0x00000000000009d6       0x7f ../MATiny_bsp/\libhal_bsp.a(altera_avalon_timer_sc.o)
+                                        0x254 (size before relaxing)
+ .debug_str     0x0000000000000a55       0x44 ../MATiny_bsp/\libhal_bsp.a(alt_close.o)
+                                        0x214 (size before relaxing)
+ .debug_str     0x0000000000000a99       0x34 ../MATiny_bsp/\libhal_bsp.a(alt_dcache_flush_all.o)
+                                        0x15e (size before relaxing)
+ .debug_str     0x0000000000000acd      0x119 ../MATiny_bsp/\libhal_bsp.a(alt_dev.o)
+                                        0x30e (size before relaxing)
+ .debug_str     0x0000000000000be6       0x45 ../MATiny_bsp/\libhal_bsp.a(alt_dev_llist_insert.o)
+                                        0x1d5 (size before relaxing)
+ .debug_str     0x0000000000000c2b       0x48 ../MATiny_bsp/\libhal_bsp.a(alt_do_ctors.o)
+                                         0xd9 (size before relaxing)
+ .debug_str     0x0000000000000c73       0x4c ../MATiny_bsp/\libhal_bsp.a(alt_do_dtors.o)
+                                         0xd8 (size before relaxing)
+ .debug_str     0x0000000000000cbf       0x14 ../MATiny_bsp/\libhal_bsp.a(alt_errno.o)
+                                        0x14e (size before relaxing)
+ .debug_str     0x0000000000000cd3       0x34 ../MATiny_bsp/\libhal_bsp.a(alt_icache_flush_all.o)
+                                        0x15e (size before relaxing)
+ .debug_str     0x0000000000000d07      0x48b ../MATiny_bsp/\libhal_bsp.a(alt_instruction_exception_entry.o)
+                                        0x5a9 (size before relaxing)
+ .debug_str     0x0000000000001192       0x56 ../MATiny_bsp/\libhal_bsp.a(alt_io_redirect.o)
+                                        0x31f (size before relaxing)
+ .debug_str     0x00000000000011e8       0x29 ../MATiny_bsp/\libhal_bsp.a(alt_open.o)
+                                        0x254 (size before relaxing)
+ .debug_str     0x0000000000001211       0x28 ../MATiny_bsp/\libhal_bsp.a(alt_release_fd.o)
+                                        0x1dc (size before relaxing)
+ .debug_str     0x0000000000001239       0x78 ../MATiny_bsp/\libhal_bsp.a(alt_tick.o)
+                                        0x25b (size before relaxing)
+ .debug_str     0x00000000000012b1       0x3b ../MATiny_bsp/\libhal_bsp.a(altera_nios2_gen2_irq.o)
+                                        0x165 (size before relaxing)
+ .debug_str     0x00000000000012ec       0x24 ../MATiny_bsp/\libhal_bsp.a(alt_find_dev.o)
+                                        0x1f5 (size before relaxing)
+ .debug_str     0x0000000000001310       0x26 ../MATiny_bsp/\libhal_bsp.a(alt_find_file.o)
+                                        0x203 (size before relaxing)
+ .debug_str     0x0000000000001336       0x30 ../MATiny_bsp/\libhal_bsp.a(alt_get_fd.o)
+                                        0x225 (size before relaxing)
+ .debug_str     0x0000000000001366      0x177 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-atexit.o)
+                                        0x21c (size before relaxing)
+ .debug_str     0x00000000000014dd       0x4c c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-exit.o)
+                                        0x1f0 (size before relaxing)
+ .debug_str     0x0000000000001529       0xd3 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-int_errno.o)
+                                        0x1d8 (size before relaxing)
+ .debug_str     0x00000000000015fc       0xe0 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-memcmp.o)
+                                        0x1df (size before relaxing)
+ .debug_str     0x00000000000016dc       0x44 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-strlen.o)
+                                        0x1e5 (size before relaxing)
+ .debug_str     0x0000000000001720      0x2ec c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-__atexit.o)
+                                        0x4ff (size before relaxing)
+ .debug_str     0x0000000000001a0c       0x65 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-__call_atexit.o)
+                                        0x4eb (size before relaxing)
+ .debug_str     0x0000000000001a71       0x48 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-impure.o)
+                                        0x4be (size before relaxing)
+ .debug_str     0x0000000000001ab9       0x2a ../MATiny_bsp/\libhal_bsp.a(alt_exit.o)
+                                        0x15a (size before relaxing)
+
+.debug_loc      0x0000000000000000      0x974
+ *(.debug_loc)
+ .debug_loc     0x0000000000000000      0x4ce c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/mno-hw-mul\libgcc.a(lib2-divmod.o)
+ .debug_loc     0x00000000000004ce       0x93 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/mno-hw-mul\libgcc.a(lib2-mul.o)
+ .debug_loc     0x0000000000000561       0x2c c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-atexit.o)
+ .debug_loc     0x000000000000058d       0x1e c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-exit.o)
+ .debug_loc     0x00000000000005ab       0x94 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-memcmp.o)
+ .debug_loc     0x000000000000063f       0x1e c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-strlen.o)
+ .debug_loc     0x000000000000065d      0x1c0 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-__atexit.o)
+ .debug_loc     0x000000000000081d      0x157 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-__call_atexit.o)
+
+.debug_macinfo
+ *(.debug_macinfo)
+
+.debug_weaknames
+ *(.debug_weaknames)
+
+.debug_funcnames
+ *(.debug_funcnames)
+
+.debug_typenames
+ *(.debug_typenames)
+
+.debug_varnames
+ *(.debug_varnames)
+
+.debug_alt_sim_info
+                0x0000000000000000       0x10
+ *(.debug_alt_sim_info)
+ .debug_alt_sim_info
+                0x0000000000000000       0x10 ../MATiny_bsp//obj/HAL/src/crt0.o
+                0x0000000000010000                __alt_data_end = 0x10000
+                0x0000000000010000                PROVIDE (__alt_stack_pointer, __alt_data_end)
+                [!provide]                        PROVIDE (__alt_stack_limit, __alt_stack_base)
+                [!provide]                        PROVIDE (__alt_heap_start, end)
+                [!provide]                        PROVIDE (__alt_heap_limit, 0x10000)
+OUTPUT(MATiny.elf elf32-littlenios2)
+
+.debug_ranges   0x0000000000000000      0x190
+ .debug_ranges  0x0000000000000000       0x20 ../MATiny_bsp//obj/HAL/src/crt0.o
+ .debug_ranges  0x0000000000000020       0x60 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/mno-hw-mul\libgcc.a(lib2-divmod.o)
+ .debug_ranges  0x0000000000000080       0x28 ../MATiny_bsp/\libhal_bsp.a(alt_irq_entry.o)
+ .debug_ranges  0x00000000000000a8       0x10 ../MATiny_bsp/\libhal_bsp.a(alt_irq_handler.o)
+ .debug_ranges  0x00000000000000b8       0x18 ../MATiny_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_read.o)
+ .debug_ranges  0x00000000000000d0       0x30 ../MATiny_bsp/\libhal_bsp.a(alt_exception_entry.o)
+ .debug_ranges  0x0000000000000100       0x18 ../MATiny_bsp/\libhal_bsp.a(alt_instruction_exception_entry.o)
+ .debug_ranges  0x0000000000000118       0x10 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-atexit.o)
+ .debug_ranges  0x0000000000000128       0x10 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-exit.o)
+ .debug_ranges  0x0000000000000138       0x10 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-memcmp.o)
+ .debug_ranges  0x0000000000000148       0x10 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-strlen.o)
+ .debug_ranges  0x0000000000000158       0x10 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-__atexit.o)
+ .debug_ranges  0x0000000000000168       0x28 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-__call_atexit.o)

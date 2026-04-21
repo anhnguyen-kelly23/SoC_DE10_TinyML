@@ -1,0 +1,98 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dD:/Quartus/TinyML/simulation/modelsim
+vmac_unit
+Z1 !s110 1776226497
+!i10b 1
+!s100 k;Y2VEnWPF1hOkh6i_1ZC2
+I1OPl8@^VmSHlZUTKRo3:O2
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1775786369
+8D:/Quartus/TinyML/mac_unit.v
+FD:/Quartus/TinyML/mac_unit.v
+Z3 L0 10
+Z4 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z5 !s108 1776226497.000000
+!s107 D:/Quartus/TinyML/mac_unit.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/Quartus/TinyML|D:/Quartus/TinyML/mac_unit.v|
+!i113 1
+Z6 o-vlog01compat -work work
+Z7 !s92 -vlog01compat -work work +incdir+D:/Quartus/TinyML
+Z8 tCvgOpt 0
+vmlp_accelerator
+R1
+!i10b 1
+!s100 >d2^K5bMVe8cAeU8aoKIQ3
+I;bQ]4J=kT5KAjVBDl3b433
+R2
+R0
+w1776221297
+8D:/Quartus/TinyML/mlp_accelerator.v
+FD:/Quartus/TinyML/mlp_accelerator.v
+L0 29
+R4
+r1
+!s85 0
+31
+R5
+!s107 D:/Quartus/TinyML/mlp_accelerator.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/Quartus/TinyML|D:/Quartus/TinyML/mlp_accelerator.v|
+!i113 1
+R6
+R7
+R8
+vtb_mlp_accelerator
+!s110 1776226498
+!i10b 1
+!s100 dMdb6Am]Mm]<UeQDegMId2
+I^4L4B`H1A6S[0^ERlH4]g2
+R2
+R0
+w1776226342
+8D:/Quartus/TinyML/tb_mlp_accelerator.v
+FD:/Quartus/TinyML/tb_mlp_accelerator.v
+L0 14
+R4
+r1
+!s85 0
+31
+!s108 1776226498.000000
+!s107 D:/Quartus/TinyML/tb_mlp_accelerator.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/Quartus/TinyML|D:/Quartus/TinyML/tb_mlp_accelerator.v|
+!i113 1
+R6
+R7
+R8
+vweight_rom
+R1
+!i10b 1
+!s100 kkXkT?g@M2caIBPKgV[7G0
+IfoR;zzaNnoZj`n[XZng;D2
+R2
+R0
+w1775786396
+8D:/Quartus/TinyML/weight_rom.v
+FD:/Quartus/TinyML/weight_rom.v
+R3
+R4
+r1
+!s85 0
+31
+R5
+!s107 D:/Quartus/TinyML/weight_rom.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/Quartus/TinyML|D:/Quartus/TinyML/weight_rom.v|
+!i113 1
+R6
+R7
+R8
