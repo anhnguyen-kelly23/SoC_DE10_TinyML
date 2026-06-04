@@ -1,5 +1,5 @@
 /*============================================================================
- * main.c -- Nios II Firmware for MNIST TinyML SoC
+ * source.c -- Nios II Firmware for MNIST TinyML SoC
  *============================================================================*/
 
 #include <stdio.h>
@@ -23,20 +23,6 @@
 #define MLP_CTRL_RESET   0x02
 #define MLP_STATUS_BUSY  0x01
 #define MLP_STATUS_DONE  0x02
-
-/*--- 7-segment encoding for digits 0-9 (active LOW, common anode) ---*/
-static const unsigned char hex_code[10] = {
-    0xC0, /* 0: 1100 0000 */
-    0xF9, /* 1: 1111 1001 */
-    0xA4, /* 2: 1010 0100 */
-    0xB0, /* 3: 1011 0000 */
-    0x99, /* 4: 1001 1001 */
-    0x92, /* 5: 1001 0010 */
-    0x82, /* 6: 1000 0010 */
-    0xF8, /* 7: 1111 1000 */
-    0x80, /* 8: 1000 0000 */
-    0x90  /* 9: 1001 0000 */
-};
 
 /*--- Timer ---*/
 volatile unsigned int timer_seconds = 0;
@@ -92,26 +78,6 @@ static void jtag_print_dec(alt_u32 base, int val) {
     while (i > 0) jtag_uart_putchar(base, (alt_u8)buf[--i]);
 }
 
-/*--- HEX Display Driver ---*/
-/*
- * Write digit (0-9) to one specific HEX display via Custom IP.
- * HEX_0_BASE covers all 6 displays through address 0..5.
- * Address mapping: 0=HEX0, 1=HEX1, ..., 5=HEX5
- */
-static void hex_display_digit(int hex_port, int digit) {
-#ifdef HEX_0_BASE
-    if (digit >= 0 && digit <= 9)
-        IOWR(HEX_0_BASE, hex_port, hex_code[digit]);
-#endif
-}
-
-/* Turn off (blank) one HEX display */
-static void hex_display_off(int hex_port) {
-#ifdef HEX_0_BASE
-    IOWR(HEX_0_BASE, hex_port, 0x7F); /* All segments OFF (active LOW) */
-#endif
-}
-
 /*--- MLP Accelerator Driver ---*/
 static inline void mlp_soft_reset(alt_u32 base) {
     IOWR_32DIRECT(base, MLP_REG_CTRL, MLP_CTRL_RESET);
@@ -151,9 +117,6 @@ int main(void) {
     /* --- Initialize timer and register ISR --- */
     timer_Init();
     alt_ic_isr_register(0, TIMER_0_IRQ, Timer_IRQ_Handler, (void*)0, (void*)0);
-
-    /* --- Blank all HEX displays at startup --- */
-    for (i = 0; i < 6; i++) hex_display_off(i);
 
     /* --- Banner --- */
     jtag_print(uart_base, "\r\n");
@@ -211,21 +174,13 @@ int main(void) {
             jtag_print(uart_base, "\r\n");
         }
 
-        /* ============================================
-         * Step 5: Write predicted digit to HEX0
-         *         (THIS IS THE KEY MISSING PIECE)
-         * ============================================ */
-        hex_display_digit(0, digit);   /* HEX0 shows predicted digit */
-
-        jtag_print(uart_base, "\r\n  HEX0 is now displaying: ");
+        jtag_print(uart_base, "\r\n");
+        jtag_print(uart_base, "================================================\r\n");
+        jtag_print(uart_base, "  HEX0 is now displaying: ");
         jtag_print_dec(uart_base, digit);
         jtag_print(uart_base, "\r\n");
 
-#ifdef LED_BASE
-        IOWR_32DIRECT(LED_BASE, 0, (1 << digit));
-#endif
-
-        /* Step 6: Wait 5 seconds then move to next image */
+        /* Step 5: Wait 5 seconds then move to next image */
         if (img_idx < NUM_TEST_IMAGES - 1) {
             jtag_print(uart_base, "  Waiting 5 seconds...\r\n\r\n");
             delay_seconds(5);

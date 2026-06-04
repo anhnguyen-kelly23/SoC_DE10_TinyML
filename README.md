@@ -35,8 +35,7 @@ Hệ thống nhận dạng chữ số viết tay (MNIST) sử dụng mạng nơ-
 │  │  test_image.h                                           │ │
 │  └─────────────────────────────────────────────────────────┘ │
 │                           │                                   │
-│                    HEX0 Display                               │
-│                    LEDR[9:0] LEDs                             │
+│                    HEX0 Display (hardwired)                   │
 │                    JTAG UART Console                          │
 └───────────────────────────────────────────────────────────────┘
 ```
@@ -202,27 +201,62 @@ File chính: [TinyML/Software/MATiny/hello_world.c](TinyML/Software/MATiny/hello
 
 ```
 Khởi tạo hệ thống
+    ├── Cấu hình Timer 1 giây (50 MHz / 50,000,000)
+    ├── Đăng ký Timer ISR
     └── Vòng lặp 10 ảnh (từ test_image.h)
-            ├── 1. Soft-reset MLP Accelerator
+            ├── 1. Soft-reset MLP Accelerator (CTRL = 0x02)
             ├── 2. Ghi 784 pixel qua Avalon-MM (địa chỉ 0x1000–0x1C3C)
             ├── 3. Ghi START (CTRL = 0x01)
             ├── 4. Polling STATUS cho đến khi DONE = 1
-            ├── 5. Đọc RESULT (chữ số dự đoán)
-            ├── 6. Đọc SCORE và OUT[0..9]
+            ├── 5. Đọc RESULT (chữ số dự đoán 0–9)
+            ├── 6. Đọc SCORE và OUT[0..9] (10 output scores)
             ├── 7. In kết quả qua JTAG UART Console
-            ├── 8. Hiển thị chữ số trên HEX0
-            ├── 9. Bật LED[digit]
-            └── 10. Chờ 5 giây → ảnh tiếp theo
+            ├── 8. HEX0 tự hiển thị kết quả (hardwired từ accelerator)
+            └── 9. Chờ 5 giây → ảnh tiếp theo
 ```
+
+> **Lưu ý:** HEX0 được điều khiển hoàn toàn bằng phần cứng thông qua kết nối trực tiếp
+> `mlp_accelerator.result_digit[3:0]` → `hex_decoder` → `HEX0` trong `mnist_soc_top.v`.
+> Firmware không cần ghi giá trị ra HEX — khi inference hoàn tất, HEX0 tự cập nhật.
 
 ### Output UART Console (mẫu)
 
 ```
-=== Image 0 ===
-Predicted digit: 7
-Max score: 1234567
-Scores: [  -234,  -456,  -678,  123,  -345,  -567,   -89,  1234, -901,  -123 ]
-                                                               ^ predicted
+================================================
+  MNIST Digit Recognition -- TinyML SoC
+  MLP: 784 -> 128 (Leaky ReLU) -> 10
+  Board: DE10-Standard (Cyclone V)
+  Mode: 10-image sequential test
+================================================
+
+================================================
+  Image 1 / 10
+================================================
+[1] Resetting MLP Accelerator...
+[2] Writing test image (784 pixels)...
+    Image loaded successfully.
+[3] Starting inference...
+    Waiting for hardware...
+    Inference complete!
+
+  Predicted digit: 7
+  Max score:       12345
+
+  Output scores:
+    Digit 0: -234
+    Digit 1: -456
+    Digit 2: -678
+    Digit 3: 123
+    Digit 4: -345
+    Digit 5: -567
+    Digit 6: -89
+    Digit 7: 12345  <-- PREDICTED
+    Digit 8: -901
+    Digit 9: -123
+
+================================================
+  HEX0 is now displaying: 7
+  Waiting 5 seconds...
 ```
 
 ### Nạp firmware lên board
@@ -241,9 +275,9 @@ Scores: [  -234,  -456,  -678,  123,  -345,  -567,   -89,  1234, -901,  -123 ]
 Đã kiểm tra thành công 10 ảnh xuất ra từ `test_image.h` trên board DE10-Standard:
 
 - Firmware chạy đúng luồng: ghi ảnh → kích hoạt accelerator → nhận kết quả
-- Chữ số dự đoán hiển thị trên **HEX0**
-- LED tương ứng với chữ số dự đoán sáng lên
-- Kết quả in đầy đủ 10 output score qua **JTAG UART Console**
+- Chữ số dự đoán hiển thị trên **HEX0** (điều khiển bằng phần cứng, tự động cập nhật)
+- Kết quả in đầy đủ 10 output scores qua **JTAG UART Console**
+- Mỗi ảnh cách nhau 5 giây nhờ Timer interrupt
 
 ---
 
@@ -262,7 +296,7 @@ Scores: [  -234,  -456,  -678,  123,  -345,  -567,   -89,  1234, -901,  -123 ]
 | Độ chính xác INT8 | ~99.77% |
 | CPU nhúng | Nios II Gen2 |
 | Giao tiếp IP | Avalon-MM Slave |
-| Hiển thị kết quả | 7-segment HEX0 + LEDR + JTAG UART |
+| Hiển thị kết quả | 7-segment HEX0 (hardwired) + JTAG UART |
 
 ---
 
